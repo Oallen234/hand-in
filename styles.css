@@ -1,28 +1,95 @@
 @font-face {
-    font-family: "the seasons";
-    src: url(""C:\Users\oalle\Downloads\ProPDFHub.msi"");
-  }
-
-
-h1 {
-    color: rgb(0, 0, 0);
+  font-family: "the seasons";
+  src: url("C:\Users\oalle\Downloads\ProPDFHub.msi");
 }
-  a:link {
-    color:rgb(0, 0, 0);
-
-  }
 
 
-  a:hover{
-    text-decoration: rgb(111, 110, 110);
-  }
 
+h2 {
+  color: rgb(255, 255, 255);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 400%;
+}
 
 
 .navbar {
-    color: antiquewhite;
-    font-family: 'Courier New', Courier, monospace ;
-    font-weight: bold;
+  background-color: #121e23;
+
+  height: 50px;
+  line-height: 50px;
+  color: rgb(255, 255, 255);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 200%;
+
+
+
+  a:link {
+    color: rgb(255, 255, 255);
+  
+  }
+  
+  
+  a:hover {
+    text-decoration: rgb(111, 110, 110);
+  }
+  
+  a:visited {
+    color: white;
+  }
+  
+}
+
+.navbar ul {
+  display: flex;
+  gap: 100px;
+
+
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* .navbar li {
+  float: left;
+} */
+
+
+article {
+  padding: 10px 15px 15px 10px;
+  margin: 0;
+}
+
+
+.frontface {
+  background-image: url('https://media.istockphoto.com/id/1336275269/de/foto/stark-alkoholhaltige-getr%C3%A4nke-harte-spirituosen-spirituosen-und-destillate-werden-in-gl%C3%A4sern.jpg?s=612x612&w=0&k=20&c=sOcyFZ460FsWsXbpJ1in6brinnEq0xTKpozAxQG7Tug=');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  height: 80vh;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.positiontitle {
+  position: absolute;
+  top: 540px;
+  left: 38%;
+  text-align: center;
+  z-index: 4;
 
 }
 
+article {
+  padding: 10px;
+  margin: 10px;
+  background: rgb(37, 43, 43);
+  flex-direction: column;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+}
