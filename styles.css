@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "the seasons";
+    src: url(""C:\Users\oalle\Downloads\ProPDFHub.msi"");
+  }
+
+
+h1 {
+    color: rgb(0, 0, 0);
+}
+  a:link {
+    color:rgb(0, 0, 0);
+
+  }
+
+
+  a:hover{
+    text-decoration: rgb(111, 110, 110);
+  }
+
+
+
+.navbar {
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace ;
+    font-weight: bold;
+
+}
+
