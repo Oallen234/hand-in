@@ -1,95 +1,122 @@
+/* CSS Reset */
+
+html,
+body {
+  margin: 0;
+}
+
+/* Main Css */
+
 @font-face {
   font-family: "the seasons";
   src: url("C:\Users\oalle\Downloads\ProPDFHub.msi");
 }
 
+.minititles-section {
+  display: flex;
+  flex-direction: row;
+}
 
+.hometime {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  justify-content: space-between;
+}
 
-h2 {
-  color: rgb(255, 255, 255);
+.bws {
+  display: flex;
+  gap: 1rem;
+}
+
+h1{
+  color: #121e23;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 400%;
+
 }
 
 
 .navbar {
-  background-color: #121e23;
-
-  height: 50px;
-  line-height: 50px;
+  background-color: rgba(36, 24, 24, 0.5);
+  padding: 1rem;
   color: rgb(255, 255, 255);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   font-size: 200%;
-
-
-
-  a:link {
-    color: rgb(255, 255, 255);
-  
-  }
-  
-  
-  a:hover {
-    text-decoration: rgb(111, 110, 110);
-  }
-  
-  a:visited {
-    color: white;
-  }
-  
 }
 
-.navbar ul {
-  display: flex;
-  gap: 100px;
-
-
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
+.navbar a:link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
-/* .navbar li {
-  float: left;
-} */
-
-
-article {
-  padding: 10px 15px 15px 10px;
-  margin: 0;
+.navbar a:hover {
+  text-decoration: rgb(111, 110, 110);
 }
 
+.navbar a:visited {
+  color: white;
+}
 
 .frontface {
+  display: flex;
   background-image: url('https://media.istockphoto.com/id/1336275269/de/foto/stark-alkoholhaltige-getr%C3%A4nke-harte-spirituosen-spirituosen-und-destillate-werden-in-gl%C3%A4sern.jpg?s=612x612&w=0&k=20&c=sOcyFZ460FsWsXbpJ1in6brinnEq0xTKpozAxQG7Tug=');
   background-size: cover;
-  background-position: center;
-  position: relative;
-  text-align: center;
-  height: 80vh;
-  align-items: center;
-  justify-content: space-between;
+  height: 100vh;
   flex-direction: column;
-  z-index: 2;
+  justify-content: space-between;
 }
 
-.positiontitle {
-  position: absolute;
-  top: 540px;
-  left: 38%;
+.position-title {
+  color: rgb(255, 255, 255);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 400%;
+  margin: auto 0;
   text-align: center;
-  z-index: 4;
-
 }
 
 article {
-  padding: 10px;
-  margin: 10px;
-  background: rgb(37, 43, 43);
-  flex-direction: column;
+  background: rgb(255, 255, 255);
 }
-section {
+
+.minititles {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 150%;
+  color: #121e23;
+  text-align: center;
+}
+
+.beerface {
   display: flex;
-  justify-content: space-around;
+  background-image: url('https://img.freepik.com/free-photo/golden-wheat-brew-frothy-pint-glass-generated-by-ai_188544-35139.jpg');
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wineface {
+  display: flex;
+  background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/170522173432-6-maui-wine-1.jpg?q=w_1600,h_900,x_0,y_0,c_fill');
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spiritface {
+  display: flex;
+  background-image: url('https://cdn.prod.website-files.com/668e33655e63d7cdd7ed90ef/673584f33a174bf001d6d7ff_pexels-kelly-1179532-2796105_d526fc55ebb87e7ff226ce1375e395c5_2000.jpeg');
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 80rem) {
+  .minititles-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
