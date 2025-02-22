@@ -30,7 +30,7 @@ body {
   gap: 1rem;
 }
 
-h1{
+h1 {
   color: #121e23;
   font-family: Georgia, 'Times New Roman', Times, serif;
 
@@ -74,7 +74,15 @@ h1{
   font-size: 400%;
   margin: auto 0;
   text-align: center;
+
 }
+
+/* 
+@keyframes .position-title{
+  0% {width: 0}
+  100%{width: 100%}
+
+} */
 
 article {
   background: rgb(255, 255, 255);
@@ -85,6 +93,103 @@ article {
   font-size: 150%;
   color: #121e23;
   text-align: center;
+}
+
+.greyybox {
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  initial-value: 0;
+  transition-delay: 3s;
+  transition-delay: 2s, 4ms;
+}
+
+.waiting-list {
+  display: flex;
+  flex-direction: row;
+  background-color: #121e23;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sign-up-text {
+  justify-content: left;
+  padding-left: 5%;
+  color: #f0f0f0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 300%;
+
+}
+
+.input-email {
+  justify-content: right;
+  height: 2cm;
+  width: 12cm;
+  padding-right: 2cm;
+  font-size: larger;
+  text-align: center;
+
+
+}
+
+.button-list {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f0f0f0;
+  font-size: 200%;
+  border-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  background-color: #121e23;
+  height: 1.8cm;
+  width: 2.9cm;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer; 
+  
+}
+
+
+.button-list:hover{
+  color: #2a3b42;
+  background-color: #f0f0f0;
+}
+
+.bottom-library {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f0f0f0;
+  background-color: #121e23;
+  flex-direction: row;
+  padding: 30px 5px 30px 5px;
+}
+
+
+.library-logo {
+  font-size: 200%;
+  font-weight: bold;
+
+}
+
+.right-library a:visited {
+  color: white;
+  list-style: none;
+}
+
+.right-library a:link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: large;
+  list-style: none;
+}
+.left-library {
+  justify-content: left;
+  margin-left: 100px;
+}
+.right-library {
+  justify-content: left;
+  list-style: none;
+  margin-right: 24cm;
+
 }
 
 .beerface {
@@ -118,5 +223,11 @@ article {
   .minititles-section {
     display: flex;
     flex-direction: column;
+    padding-top: 15%;
+  }
+
+  .input-email {
+    padding-right: 15%;
+
   }
 }
