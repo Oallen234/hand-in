@@ -59,6 +59,26 @@ h1 {
   color: white;
 }
 
+.button-list-nav {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f0f0f0;
+  font-size: 100%;
+  border-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  background-color: #121e23;
+  height: 1.4cm;
+  width: 2.9cm;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+
+}
+
+
+.button-list-nav:hover {
+  color: #2a3b42;
+  background-color: #f0f0f0;
+}
+
 .frontface {
   display: flex;
   background-image: url('https://media.istockphoto.com/id/1336275269/de/foto/stark-alkoholhaltige-getr%C3%A4nke-harte-spirituosen-spirituosen-und-destillate-werden-in-gl%C3%A4sern.jpg?s=612x612&w=0&k=20&c=sOcyFZ460FsWsXbpJ1in6brinnEq0xTKpozAxQG7Tug=');
@@ -139,15 +159,15 @@ article {
   border-color: #f0f0f0;
   border: 2px solid #f0f0f0;
   background-color: #121e23;
-  height: 1.8cm;
+  height: 1.4cm;
   width: 2.9cm;
   transition: color 0.3s ease, background-color 0.3s ease;
-  cursor: pointer; 
-  
+  cursor: pointer;
+
 }
 
 
-.button-list:hover{
+.button-list:hover {
   color: #2a3b42;
   background-color: #f0f0f0;
 }
@@ -181,10 +201,12 @@ article {
   font-size: large;
   list-style: none;
 }
+
 .left-library {
   justify-content: left;
   margin-left: 100px;
 }
+
 .right-library {
   justify-content: left;
   list-style: none;
@@ -217,7 +239,66 @@ article {
   height: 50vh;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto;
 }
+
+.drink-head {
+  padding-left: 2cm;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 200%;
+  color: #121e23;
+}
+
+.drink-text {
+  padding: 10px 2cm;
+}
+
+.double-search {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: space-between; */
+
+
+
+}
+
+.search-filter-div {
+  padding-left: 2cm;
+}
+
+.search-filter {
+  padding-left: 2cm;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-filter li {
+  margin-right: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  height: 4cm;
+  transition: 0.3s ease;
+
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
 
 @media screen and (max-width: 80rem) {
   .minititles-section {
@@ -229,5 +310,17 @@ article {
   .input-email {
     padding-right: 15%;
 
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
