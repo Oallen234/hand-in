@@ -3,6 +3,7 @@
 html,
 body {
   margin: 0;
+  background-color: white;
 }
 
 /* Main Css */
@@ -33,9 +34,7 @@ body {
 h1 {
   color: #121e23;
   font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
-
 
 .navbar {
   background-color: rgba(36, 24, 24, 0.5);
@@ -49,6 +48,15 @@ h1 {
 .navbar a:link {
   color: rgb(255, 255, 255);
   text-decoration: none;
+}
+
+.search-bar {
+  align-items: center;
+  height: 1cm;
+  width: 5cm;
+  font-size: larger;
+  text-align: center;
+  padding-top: 15%;
 }
 
 .navbar a:hover {
@@ -68,9 +76,10 @@ h1 {
   background-color: #121e23;
   height: 1.4cm;
   width: 2.9cm;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease;
+  background-color: 0.3s ease;
   cursor: pointer;
-
+  background: rgb(0 0 0 / 30%);
 }
 
 
@@ -118,7 +127,7 @@ article {
 .greyybox {
   background-color: #f0f0f0;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px #121e23(0, 0, 0, 0.5);
   initial-value: 0;
   transition-delay: 3s;
   transition-delay: 2s, 4ms;
@@ -161,7 +170,8 @@ article {
   background-color: #121e23;
   height: 1.4cm;
   width: 2.9cm;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease;
+  background-color: 0.3s ease;
   cursor: pointer;
 
 }
@@ -170,6 +180,154 @@ article {
 .button-list:hover {
   color: #2a3b42;
   background-color: #f0f0f0;
+}
+
+.carousel {
+  display: grid;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-template-columns: repeat(6, 1fr);
+  overscroll-behavior-x: contain;
+  grid-template-columns: contain;
+}
+
+.product-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+
+  /* overflow: hidden; */
+}
+
+.product img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-name {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+
+
+.beerface {
+  display: flex;
+  background-image: url('https://img.freepik.com/free-photo/golden-wheat-brew-frothy-pint-glass-generated-by-ai_188544-35139.jpg');
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wineface {
+  display: flex;
+  background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/170522173432-6-maui-wine-1.jpg?q=w_1600,h_900,x_0,y_0,c_fill');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.spiritface {
+  display: flex;
+  background-image: url('https://cdn.prod.website-files.com/668e33655e63d7cdd7ed90ef/673584f33a174bf001d6d7ff_pexels-kelly-1179532-2796105_d526fc55ebb87e7ff226ce1375e395c5_2000.jpeg');
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.champagneface {
+  display: flex;
+  background-image: url('https://wine-intelligence.com/cdn/shop/articles/Champagne_Sparkling_Wine_Bottles.png?v=1727497149&width=1100');
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.communityface {
+  display: flex;
+  background-image: url('https://www.welovelocal.nz/wp-content/uploads/2020/11/craft-gin-gift-box-table.jpg');
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+
+.drink-head {
+  padding-left: 2cm;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 300%;
+  color: rgb(255, 255, 255);
+  margin: auto 0;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.drink-text {
+  padding: 10px 2cm;
+}
+
+.double-search {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: space-between; */
+}
+
+.search-filter-div {
+  padding-left: 2cm;
+}
+
+.search-filter {
+  padding-left: 2cm;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-filter li {
+  margin-right: 20px;
+}
+
+.cart-button {
+  color: #121e23;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f0f0f0;
+  font-size: 200%;
+  border-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  background-color: #121e23;
+  height: 1.4cm;
+  width: 5cm;
+}
+
+.cart-button:hover {
+  transform: scale(1.1);
 }
 
 .bottom-library {
@@ -193,6 +351,7 @@ article {
 .right-library a:visited {
   color: white;
   list-style: none;
+  list-style-type: none;
 }
 
 .right-library a:link {
@@ -211,96 +370,29 @@ article {
   justify-content: left;
   list-style: none;
   margin-right: 24cm;
-
-}
-
-.beerface {
-  display: flex;
-  background-image: url('https://img.freepik.com/free-photo/golden-wheat-brew-frothy-pint-glass-generated-by-ai_188544-35139.jpg');
-  background-size: cover;
-  height: 50vh;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.wineface {
-  display: flex;
-  background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/170522173432-6-maui-wine-1.jpg?q=w_1600,h_900,x_0,y_0,c_fill');
-  background-size: cover;
-  height: 50vh;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.spiritface {
-  display: flex;
-  background-image: url('https://cdn.prod.website-files.com/668e33655e63d7cdd7ed90ef/673584f33a174bf001d6d7ff_pexels-kelly-1179532-2796105_d526fc55ebb87e7ff226ce1375e395c5_2000.jpeg');
-  background-size: cover;
-  height: 50vh;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.drink-head {
-  padding-left: 2cm;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 200%;
-  color: #121e23;
-}
-
-.drink-text {
-  padding: 10px 2cm;
-}
-
-.double-search {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center;
-  justify-content: space-between; */
-
-
-
-}
-
-.search-filter-div {
-  padding-left: 2cm;
-}
-
-.search-filter {
-  padding-left: 2cm;
-  display: flex;
   list-style-type: none;
-  padding: 0;
-}
-
-.search-filter li {
-  margin-right: 20px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.product {
-  border: 1px solid #ddd;
-  padding: 20px;
-  text-align: center;
-  height: 4cm;
-  transition: 0.3s ease;
 
 }
 
-.product:hover {
-  transform: scale(1.1);
+/* 
+.unbullet {
+  list-style-type: none;
+  list-style: none;
+} */
+
+
+
+
+
+@media screen and (max-width: 40rem) {
+
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-
-@media screen and (max-width: 80rem) {
+@media (min-width: 80rem) {
   .minititles-section {
     display: flex;
     flex-direction: column;
@@ -309,18 +401,10 @@ article {
 
   .input-email {
     padding-right: 15%;
-
   }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-@media screen and (max-width: 1024px) {
 
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
 }
