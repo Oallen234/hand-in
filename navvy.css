@@ -1,0 +1,106 @@
+
+/* this page has everything related to the navigation bar setup */
+
+.bws {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+h1 {
+    color: #121e23;
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(36, 24, 24, 0.5);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.navigation-bar a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navigation-button-side {
+    padding: 1rem;
+    transition: right 0.3s ease;
+    display: block;
+
+}
+
+#three-lines button{
+    color: #220c0c;
+    background-color: none;
+    
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.search-bar {
+    width: 5cm;
+    font-size: larger;
+    text-align: center;
+}
+
+.navigation-bar a:hover {
+    text-decoration: rgb(111, 110, 110);
+}
+
+.navigation-bar a:visited {
+    color: white;
+}
+
+.button-list-nav {
+    color: #f0f0f0;
+    font-size: 100%;
+    border-color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+    background-color: #121e23;
+    height: 1.4cm;
+    width: 2.9cm;
+    transition: color 0.3s ease;
+    background-color: 0.3s ease;
+    cursor: pointer;
+    background: rgb(0 0 0 / 30%);
+}
+
+.button-list-nav:hover {
+    color: #2a3b42;
+    background-color: #f0f0f0;
+}
+
+.not-logo {
+    text-align: center;
+}
+
+/* everything is set to a small screen and exceptions made below for when the screen is big */
+@media screen and (max-width: 40rem) {}
+
+@media screen and (min-width: 40rem) {}
+
+@media screen and (min-width: 82rem) {
+    .bws {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .navigation-bar {
+        flex-direction: row;
+    }
+
+    .navigation-button-side {
+        display: none;
+    }
+}
