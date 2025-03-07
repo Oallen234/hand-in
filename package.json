@@ -1,0 +1,28 @@
+{
+  "name": "handinwork",
+  "version": "1.0.0",
+  "description": "royal spirit copy website",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oallen234/hand-in.git"
+  },
+  "author": "Olivia Allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oallen234/hand-in/issues"
+  },
+  "homepage": "https://github.com/Oallen234/hand-in#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

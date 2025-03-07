@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="substyles.css" />
-    <link rel="stylesheet" href="navvy.css" />
-    <link rel="stylesheet" href="css-reset.css" />
-
-    <script src="hardstuff.js">
+    <link rel="stylesheet" href="../css/css-reset.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/navvy.css" />
+    <link rel="stylesheet" href="../css/substyles.css" />
+    <script src="../hardstuff.js">
     </script>
+
 </head>
 
 <body>
-    <header class="wine-face">
+
+    <header class="beer-face">
 
         <nav class="navigation-bar">
 
@@ -40,7 +40,10 @@
                 <li><a href="community.html"> community</a></li>
 
                 <li>
-                    <input class="search-bar" type="search" name="search bar" id="search-bar" />
+                    <form  action= "/search" method="GET">
+                    <input class="search-bar" type="text" name="search" id="search" />
+                    <button> ? </button>
+                </form>
                 </li>
                 <li>
                     <a href="#joinbutton"><button class="button-list-nav">Join</button></a>
@@ -48,9 +51,12 @@
             </ul>
 
         </nav>
-            <h2 class="drink-head"> wine </h2>
+        <h2 class="drink-head"> beer</h2>
         </div>
+
+
     </header>
+
     <main>
 
         <section class="double-search">
@@ -160,73 +166,19 @@
                     <p class="mini-titles">Product Price</p>
                     <button class="cart-button"> Add to Cart </button>
                 </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
-                </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
-                </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
-                </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
-                </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
-                </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
-                </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
 
-                </div>
-                <div class="product">
-                    <img src="https://www.colourflooring.co.uk/cdn/shop/products/de_beauvoir_grey_swatch_580x580.jpg?v=1666101285"
-                        alt="Product 1 Image" width="234px" height="290px">
-                    <p class="mini-titles">Product Name</p>
-                    <p class="mini-titles">Product Price</p>
-                    <button class="cart-button"> Add to Cart </button>
+            </div>
 
-                </div>
 
         </section>
-
         <section>
             <div class="waiting-list">
 
                 <h2 class="sign-up-text">Connect with our community</h2>
-                <input class="input-email" type="email" name="email address" id="email address" />
-                <button id="joinbutton" class="button-list"> Join</button>
+                <form action="/contact" method="POST">
+                    <input class="input-email" type="email" name="email_address" id="email_address" />
+                    <input id="joinbutton" type="submit" class="button-list" ></input>
+                </form>
 
 
 
@@ -237,9 +189,6 @@
 
         </section>
         <p></p>
-
-
-
     </main>
     <footer>
         <section class="bottom-library">
@@ -259,6 +208,7 @@
                     <li><a href="spirits.html"> spirits</a></li>
                     <li><a href="champagne.html"> champagne</a></li>
                     <li><a href="community.html"> community <a></li>
+
                 </ul>
             </div>
         </section>

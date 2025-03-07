@@ -137,14 +137,17 @@
     grid-template-columns: repeat(2, 1fr);
 
   }
+
   .cart-button {
     font-size: 100%;
     block-size: 10%;
     width: 100px;
-  
+
   }
+
   .mini-titles {
     font-size: 90%;
+  }
 }
 
 @media screen and (min-width: 40rem) {
@@ -157,10 +160,10 @@
     font-size: 100%;
     block-size: 10%;
     width: 100px;
-  
+
   }
+
   .mini-titles {
     font-size: 90%;
   }
 }
-
