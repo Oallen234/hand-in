@@ -11,13 +11,6 @@ function closeSidebar() {
 }
 
 
-function scrolleft() {
-
-}
-
-function scrollright() {
-  
-}
 
 console.log(document)
 console.log("asf")

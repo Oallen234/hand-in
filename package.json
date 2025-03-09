@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Oallen234/hand-in#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.2"
   },
   "devDependencies": {
