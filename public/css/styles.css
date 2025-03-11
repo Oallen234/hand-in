@@ -48,11 +48,15 @@ article {
   width: 100%;
   position: relative;
   max-width: none;
+  overflow-x: scroll;
+  scrollbar-width: none;
 
 }
 
 
+
 .carousel {
+  width: fit-content;
   display: flex;
   mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
@@ -61,13 +65,12 @@ article {
   justify-content: flex-start;
   text-align: center;
   overflow-y: hidden;
-  overflow-x: scroll;
   gap: 2rem;
   scroll-snap-align: center;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
 
   li:not(.empty) {
+    width: 18rem;
     list-style-type: none;
     scroll-snap-type: x mandatory;
     scroll-snap-align: center;
@@ -80,8 +83,9 @@ article {
 }
 
 .floor-tile {
-  width: 234px;
+  width: 250px;
   height: 290px;
+  justify-self: center;
 }
 
 .carriage {
@@ -91,11 +95,13 @@ article {
   transition: transform 0.3s;
   transform-style: preserve-3d;
   max-width: none;
+  
 }
 
 .spacey {
   color: transparent;
   scroll-snap-align: none;
+  width: 10rem;
 }
 
 .mini-titles {

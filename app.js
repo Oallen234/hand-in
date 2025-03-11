@@ -1,6 +1,10 @@
 import express from 'express'
 import { logger } from './middlewares/logger.js'
+import fs from 'node:fs'
+
 const app = express()
+
+
 app.set('view engine', 'ejs');
 app.set('views', './public/webpages')
 
@@ -12,16 +16,21 @@ app.use('/assets', express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 const PORT = 3000
 
-app.get('/', (request, response) => {
-    response.render('index')
-})
 
 app.post('/contact', (request, response) => {
     console.log('Contact form submission: ', request.body)
     const userEmail = request.body.email_address;
+    try {
+        fs.appendFileSync('public/emails.txt', userEmail + "\n")
 
+    } catch (error) {
+        console.error(error);
 
-    response.send(`Thank you for submitting your email address ${userEmail}`)
+    }
+
+    response.send(`Thank you for submitting your email address ${userEmail}`
+
+    )
 
 })
 
@@ -32,14 +41,27 @@ app.get('/search', (request, response) => {
 })
 
 
-app.get('/page/:id', (request, response) => {
+app.get('/use/:id', (request, response) => {
     const pageId = request.params.id
     response
-        .status(404)
-        .send(`the page with the name ${pageId} could not be found`)
+        .render(pageId)
 })
 
-app.get('/homepage', (request, response) => {
+app.get('/use', (request, response) => {
+    response.render('use')
+})
+
+
+
+
+
+
+app.get('/beer/:id', (request, response) => {
+    const pageId = request.params.id
+    response.render('dynamic-beer')
+})
+
+app.get('/', (request, response) => {
     response.render('homepage')
 })
 
@@ -64,6 +86,17 @@ app.get('/community', (request, response) => {
     response.render('community')
 })
 
+app.all('*', (req, res) => {
+    if (req.accepts('html')) {
+        res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+    }
+    else if (req.accepts('json')) {
+        res.status(404).json({error: "404 Not Found"});
+    } else {
+        res.status(404).type('txt').send("404 Not Found");
+        
+    }
+})
 
 
 
