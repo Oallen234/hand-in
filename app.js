@@ -88,13 +88,13 @@ app.get('/community', (request, response) => {
 
 app.all('*', (req, res) => {
     if (req.accepts('html')) {
-        res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+        res.render('404')
     }
     else if (req.accepts('json')) {
-        res.status(404).json({error: "404 Not Found"});
+        res.status(404).json({ error: "404 Not Found" });
     } else {
         res.status(404).type('txt').send("404 Not Found");
-        
+
     }
 })
 
