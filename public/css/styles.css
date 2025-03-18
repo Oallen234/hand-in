@@ -95,7 +95,7 @@ article {
   transition: transform 0.3s;
   transform-style: preserve-3d;
   max-width: none;
-  
+
 }
 
 .spacey {
@@ -111,6 +111,7 @@ article {
   font-size: 150%;
   color: #121e23;
   align-items: center;
+  text-decoration: none;
 }
 
 .mini-titles-section {
@@ -225,6 +226,17 @@ article {
 .unbullet {
   list-style-type: none;
   list-style: none;
+}
+
+.product-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.side-info {
+  align-self: center;
+  width: 750px;
 }
 
 @media screen and (max-width: 40rem) {}

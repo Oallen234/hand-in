@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('includes/head') %>
+
+    <header>
+        <%- include('includes/navvster') %>
+    </header>
+    <p>
+
+    <main>
+        <section class="product-layout">
+            <img src="/assets/beer-pics/<%=beer_image%>"
+                alt=hardsolo class="product-thing" height="800px" width="800px">
+
+            <div class="side-info">
+                <h2 class="product-title">
+                    <%= productTitle %>
+                </h2>
+
+                <div>
+                    <button>
+                        <h2 class="product-price">
+                            $<%= lowproductPrice %>
+                        </h2> 1pc
+                    </button>
+                    <button>
+                        <h2 class="product-price">
+                            $<%= highproductPrice %>
+                        </h2>
+                        6 pack
+                    </button>
+                    <h3 class="availability"> Availability: ......</h3>
+
+                </div>
+                <%- description %>
+                    <h2> Quantity</h2>
+                    <button class="cart-button">Add to Cart</button>
+                    <p>
+
+                    </p>
+            </div>
+
+
+
+        </section>
+
+    </main>
+    <p></p>
+
+    <footer>
+        <section>
+            <%- include('includes/waiting-list.ejs') %>
+
+        </section>
+        <%- include('includes/bottom-bit') %>
+
+    </footer>
+    </body>
+
+</html>

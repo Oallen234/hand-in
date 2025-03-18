@@ -1,0 +1,322 @@
+{
+  "products": [
+    {
+      "id": 111,
+      "name": "JACOB CREEK RESERVE SHIRAZ  LIMESTONE 75CL",
+      "featured_img": "jacob-creek-reserve-shiraz-limestone-75cl-169458492027.png",
+      "category_id": 6,
+      "route": "jacob-creek-reserve-shiraz-limestone-75cl",
+      "sub_category_id": 14,
+      "brand_id": 92,
+      "created_at": "2023-09-13T06:02:30.000000Z",
+      "price_variation": [
+        {
+          "id": 166,
+          "product_id": 111,
+          "price": 77,
+          "discount_price": 60,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 6,
+        "name": "Wine",
+        "route": "wine",
+        "title": "Wine labels for <span>every palate</span>",
+        "description": "<p>From rich reds to crisp whites, our handpicked wine selection caters to those seeking diverse flavors and moments. Explore celebrated labels that promise nothing but the finest wines for your enjoyment.</p>",
+        "seo": {
+          "meta_title": "Online Wine Delivery Abu Dhabi | Order Now & Enjoy Same-day delivery",
+          "meta_description": "Explore a vast selection of online wines delivery in Abu Dhabi. From bold reds to crisp whites, we have something for every taste. Order now and enjoy hassle free delivery",
+          "schema_markup": "Wine"
+        }
+      },
+      "sub_category": {
+        "id": 14,
+        "name": "Red",
+        "route": "red",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Red",
+          "meta_description": "Red",
+          "schema_markup": "Red"
+        }
+      },
+      "brands": {
+        "id": 92,
+        "name": "Shiraz"
+      }
+    },
+    {
+      "id": 113,
+      "name": "JACOB CREEK SHIRAZ ROSE 75CL",
+      "featured_img": "jacob-creek-shiraz-rose-75cl-169458534641.png",
+      "category_id": 6,
+      "route": "jacob-creek-shiraz-rose-75cl",
+      "sub_category_id": 44,
+      "brand_id": 92,
+      "created_at": "2023-09-13T06:09:36.000000Z",
+      "price_variation": [
+        {
+          "id": 859,
+          "product_id": 113,
+          "price": 45,
+          "discount_price": 35,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 6,
+        "name": "Wine",
+        "route": "wine",
+        "title": "Wine labels for <span>every palate</span>",
+        "description": "<p>From rich reds to crisp whites, our handpicked wine selection caters to those seeking diverse flavors and moments. Explore celebrated labels that promise nothing but the finest wines for your enjoyment.</p>",
+        "seo": {
+          "meta_title": "Online Wine Delivery Abu Dhabi | Order Now & Enjoy Same-day delivery",
+          "meta_description": "Explore a vast selection of online wines delivery in Abu Dhabi. From bold reds to crisp whites, we have something for every taste. Order now and enjoy hassle free delivery",
+          "schema_markup": "Wine"
+        }
+      },
+      "sub_category": {
+        "id": 44,
+        "name": "Rose",
+        "route": "rose",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Rose",
+          "meta_description": "Rose",
+          "schema_markup": "Rose"
+        }
+      },
+      "brands": {
+        "id": 92,
+        "name": "Shiraz"
+      }
+    },
+    {
+      "id": 115,
+      "name": "Jacob Creek Sparkling Moscato",
+      "featured_img": "jacob-creek-sparkling-moscato-75cl-169458570977.png",
+      "category_id": 6,
+      "route": "jacob-creek-sparkling-moscato",
+      "sub_category_id": 15,
+      "brand_id": 97,
+      "created_at": "2023-09-13T06:15:32.000000Z",
+      "price_variation": [
+        {
+          "id": 170,
+          "product_id": 115,
+          "price": 53,
+          "discount_price": 45.05,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 6,
+        "name": "Wine",
+        "route": "wine",
+        "title": "Wine labels for <span>every palate</span>",
+        "description": "<p>From rich reds to crisp whites, our handpicked wine selection caters to those seeking diverse flavors and moments. Explore celebrated labels that promise nothing but the finest wines for your enjoyment.</p>",
+        "seo": {
+          "meta_title": "Online Wine Delivery Abu Dhabi | Order Now & Enjoy Same-day delivery",
+          "meta_description": "Explore a vast selection of online wines delivery in Abu Dhabi. From bold reds to crisp whites, we have something for every taste. Order now and enjoy hassle free delivery",
+          "schema_markup": "Wine"
+        }
+      },
+      "sub_category": {
+        "id": 15,
+        "name": "White",
+        "route": "white",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "White",
+          "meta_description": "White",
+          "schema_markup": "White"
+        }
+      },
+      "brands": {
+        "id": 97,
+        "name": "Sparkling"
+      }
+    },
+    {
+      "id": 116,
+      "name": "JACOB'S CREEK CABERNET SAUVIGNON 75CL",
+      "featured_img": "jacob-s-creek-cabernet-sauvignon-75cl-169458611211.png",
+      "category_id": 6,
+      "route": "jacob's-creek-cabernet-sauvignon-75cl",
+      "sub_category_id": 14,
+      "brand_id": 98,
+      "created_at": "2023-09-13T06:22:19.000000Z",
+      "price_variation": [
+        {
+          "id": 171,
+          "product_id": 116,
+          "price": 69,
+          "discount_price": 45,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 6,
+        "name": "Wine",
+        "route": "wine",
+        "title": "Wine labels for <span>every palate</span>",
+        "description": "<p>From rich reds to crisp whites, our handpicked wine selection caters to those seeking diverse flavors and moments. Explore celebrated labels that promise nothing but the finest wines for your enjoyment.</p>",
+        "seo": {
+          "meta_title": "Online Wine Delivery Abu Dhabi | Order Now & Enjoy Same-day delivery",
+          "meta_description": "Explore a vast selection of online wines delivery in Abu Dhabi. From bold reds to crisp whites, we have something for every taste. Order now and enjoy hassle free delivery",
+          "schema_markup": "Wine"
+        }
+      },
+      "sub_category": {
+        "id": 14,
+        "name": "Red",
+        "route": "red",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Red",
+          "meta_description": "Red",
+          "schema_markup": "Red"
+        }
+      },
+      "brands": {
+        "id": 98,
+        "name": "Cab Sauv"
+      }
+    },
+    {
+      "id": 117,
+      "name": "Jacob's Creek Pinot Noir",
+      "featured_img": "jacob-s-creek-pinot-noir-75cl-169458642670.png",
+      "category_id": 6,
+      "route": "jacob's-creek-pinot-noir",
+      "sub_category_id": 14,
+      "brand_id": 99,
+      "created_at": "2023-09-13T06:27:36.000000Z",
+      "price_variation": [
+        {
+          "id": 172,
+          "product_id": 117,
+          "price": 37,
+          "discount_price": 0,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 6,
+        "name": "Wine",
+        "route": "wine",
+        "title": "Wine labels for <span>every palate</span>",
+        "description": "<p>From rich reds to crisp whites, our handpicked wine selection caters to those seeking diverse flavors and moments. Explore celebrated labels that promise nothing but the finest wines for your enjoyment.</p>",
+        "seo": {
+          "meta_title": "Online Wine Delivery Abu Dhabi | Order Now & Enjoy Same-day delivery",
+          "meta_description": "Explore a vast selection of online wines delivery in Abu Dhabi. From bold reds to crisp whites, we have something for every taste. Order now and enjoy hassle free delivery",
+          "schema_markup": "Wine"
+        }
+      },
+      "sub_category": {
+        "id": 14,
+        "name": "Red",
+        "route": "red",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Red",
+          "meta_description": "Red",
+          "schema_markup": "Red"
+        }
+      },
+      "brands": {
+        "id": 99,
+        "name": "Pinot Noir"
+      }
+    },
+    {
+      "id": 119,
+      "name": "JACOB'S CREEK RESERVE CABERNET SAUVIGNON LIMESTONE 75CL",
+      "featured_img": "jacob-s-creek-reserve-cabernet-sauvignon-limestone-75cl-169458663380.png",
+      "category_id": 6,
+      "route": "jacob's-creek-reserve-cabernet-sauvignon-limestone-75cl",
+      "sub_category_id": 14,
+      "brand_id": 98,
+      "created_at": "2023-09-13T06:32:02.000000Z",
+      "price_variation": [
+        {
+          "id": 174,
+          "product_id": 119,
+          "price": 67,
+          "discount_price": 55,
+          "offer_price": 0
+        }
+      ],
+      
+      "sub_category": {
+        "id": 14,
+        "name": "Red",
+        "route": "red",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Red",
+          "meta_description": "Red",
+          "schema_markup": "Red"
+        }
+      },
+      "brands": {
+        "id": 98,
+        "name": "Cab Sauv"
+      }
+    },
+    {
+      "id": 122,
+      "name": "Lindemans Bin Merlot",
+      "featured_img": "lindemans-bin-40-merlot-75cl-169458732395.png",
+      "category_id": 6,
+      "route": "lindemans-bin-40-merlot",
+      "sub_category_id": 14,
+      "brand_id": 90,
+      "created_at": "2023-09-13T06:43:56.000000Z",
+      "price_variation": [
+        {
+          "id": 177,
+          "product_id": 122,
+          "price": 30,
+          "discount_price": 25.5,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 6,
+        "name": "Wine",
+        "route": "wine",
+        "title": "Wine labels for <span>every palate</span>",
+        "description": "<p>From rich reds to crisp whites, our handpicked wine selection caters to those seeking diverse flavors and moments. Explore celebrated labels that promise nothing but the finest wines for your enjoyment.</p>",
+        "seo": {
+          "meta_title": "Online Wine Delivery Abu Dhabi | Order Now & Enjoy Same-day delivery",
+          "meta_description": "Explore a vast selection of online wines delivery in Abu Dhabi. From bold reds to crisp whites, we have something for every taste. Order now and enjoy hassle free delivery",
+          "schema_markup": "Wine"
+        }
+      },
+      "sub_category": {
+        "id": 14,
+        "name": "Red",
+        "route": "red",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Red",
+          "meta_description": "Red",
+          "schema_markup": "Red"
+        }
+      },
+      "brands": {
+        "id": 90,
+        "name": "Merlot"
+      }
+    }
+  ]
+}

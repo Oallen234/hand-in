@@ -1,0 +1,50 @@
+{
+    "products": [
+        {
+            "name": "Becks Beers Can 50CL",
+            "route": "becks-beer-can-50cl",
+            "price_variation": [
+                {
+                    "id": 608,
+                    "product_id": 11,
+                    "price": 59,
+                    "discount_price": 30,
+                    "offer_price": 0
+                },
+                {
+                    "id": 1479,
+                    "product_id": 11,
+                    "price": 132,
+                    "discount_price": 99,
+                    "offer_price": 0
+                }
+            ],
+            "category": {
+                "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>"
+            }
+        },
+        {
+            "name": "Budweiser Beer Can 50CL",
+            "route": "budweiser-beer-can-50cl",
+            "price_variation": [
+                {
+                    "id": 650,
+                    "product_id": 14,
+                    "price": 42,
+                    "discount_price": 35,
+                    "offer_price": 0
+                },
+                {
+                    "id": 651,
+                    "product_id": 14,
+                    "price": 168,
+                    "discount_price": 115,
+                    "offer_price": 0
+                }
+            ],
+            "category": {
+                "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>"
+            }
+        }
+    ]
+}

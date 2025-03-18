@@ -80,15 +80,21 @@
   padding: 10px;
   text-align: center;
   transition: 0.3s ease;
+  align-items: center;
 }
 
 .product img {
-  width: 100%;
-  height: 75%;
   object-fit: cover;
   object-position: center;
 }
 
+.product a {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
 
 
 .double-search {

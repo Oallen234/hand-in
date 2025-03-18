@@ -1,0 +1,167 @@
+{  "products": [
+    {
+      "id": 504,
+      "name": "DELAUNOIS CHANEZ CHAMPAGNE 75CL",
+      "featured_img": "untitled-1-171413076346.png",
+      "route": "delaunois-chanez-champagne-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "DELAUNOIS",
+      "price_variation": 
+        {
+          "price": 1456,
+          "discount_price": 1300
+        }
+      
+    },
+    {
+      "id": 505,
+      "name": "MOET & CHANDON CHAMPAGNE 75CL",
+      "featured_img": "moet-171232426431.png",
+      "route": "moet-&-chandon-champagne-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "MOET & CHANDON",
+      "price_variation": 
+        {
+          "price": 334,
+          "discount_price": 225
+        }
+      
+    },
+    {
+      "id": 506,
+      "name": "MOET & CHANDON IMPERIAL ICE 75CL",
+      "featured_img": "12650-171232191458.png",
+      "route": "moet-&-chandon-imperial-ice-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "MOET & CHANDON",
+      "price_variation": 
+        {
+          "price": 330,
+          "discount_price": 285
+        }
+      
+    },
+    {
+      "id": 507,
+      "name": "MOET & CHANDON ROSE 75Cl",
+      "featured_img": "rose-171232259983.png",
+      "route": "moet-&-chandon-rose-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "MOET & CHANDON",
+      "price_variation": 
+        {
+          "price": 360,
+          "discount_price": 340
+        }
+      
+    },
+    {
+      "id": 508,
+      "name": "VEUVE CLICQUOT 75CL",
+      "featured_img": "untitled-1-171413067085.png",
+      "route": "veuve-clicquot-75c",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "VEUVE CLICQUOT",
+      "price_variation": 
+        {
+          "price": 290,
+          "discount_price": 280
+        }
+      
+    },
+    {
+      "id": 509,
+      "name": "VEUVE CLICQUOT ROSE 75CL",
+      "featured_img": "rose2-171232369548.png",
+      "route": "veuve-clicquot-rose-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "VEUVE CLICQUOT",
+      "price_variation": 
+        {
+          "price": 375,
+          "discount_price": 340
+        }
+      
+    },
+    {
+      "id": 888,
+      "name": "G.GOBILLARD BLANC DE BLANCS  BRUT 75CL",
+      "featured_img": "oqik4rc0treohphf7-vcog-pb-600x600-171775457643.png",
+      "route": "g.gobillard-blanc-de-blancs-brut-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "G.GOBILLARD",
+      "price_variation": 
+        {
+          "price": 344,
+          "discount_price": 239
+        }
+      
+    },
+    {
+      "id": 889,
+      "name": "G.GOBILLARD BRUT- L AUTHENTIQUE 75CL",
+      "featured_img": "15455054266398-171775467259.webp",
+      "route": "g.gobillard-brut-l-authentique-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "G.GOBILLARD",
+      "price_variation": 
+        {
+          "price": 546,
+          "discount_price": 249
+        }
+      
+    },
+  
+   
+    {
+      "id": 919,
+      "name": "PROSECCO DOC FRANZINI-75CL",
+      "featured_img": "fidbtciv-proseccodocbrut-demeter-web-2-534x800-removebg-preview-1717761537100.webp",
+      "route": "prosecco-doc-franzini-75cl",
+      "category": {
+        "name": "Champagne",
+        "description": ""
+      },
+      "sub_category": null,
+      "brand": "Ita Prosecco",
+      "price_variation": 
+        {
+          "price": 50,
+          "discount_price": 39
+        }
+      
+    }
+  ]
+}

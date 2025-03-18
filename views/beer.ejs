@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('includes/head') %>
+
+    <body>
+
+        <header class="beer-face">
+            <%- include('includes/navvster') %>
+
+
+                <h2 class="drink-head"> beer</h2>
+                </div>
+
+
+        </header>
+
+        <main>
+
+            <section class="double-search">
+                <div class="search-filter-div">
+                    <h1>Filter by product</h1>
+                    <ul class="search-filter">
+                        <li>
+                            <p>example</p>
+                        </li>
+                        <li>
+                            <p>example</p>
+                        </li>
+                        <li>
+                            <p>example</p>
+                        </li>
+                        <li>
+                            <p>example</p>
+                        </li>
+                        <li>
+                            <p>example</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product-grid">
+
+                    <% for(let i=0; i < beers.length; i++) { %>
+                        <div class="product">
+                            <a href="/beer/<%=beers[i].route %>">
+                                <img src="/assets/beer-pics/<%=beers[i].featured_img %>" alt="Product 1 Image"
+                                    width="292px" height="340px">
+
+
+                                <p class="mini-titles">
+                                    <%= beers[i].name %>
+                                </p>
+                                <p class="mini-titles"> $ <%= beers[i].price_variation[0].price %>
+
+                                </p>
+                            </a>
+                            <button class="cart-button"> Add to Cart </button>
+                        </div>
+
+                        <% } %>
+
+                </div>
+
+
+            </section>
+            <section>
+                <%- include('includes/waiting-list.ejs') %>
+
+            </section>
+            <p></p>
+        </main>
+        <footer>
+            <%- include('includes/bottom-bit') %>
+
+        </footer>
+    </body>
+
+
+</html>

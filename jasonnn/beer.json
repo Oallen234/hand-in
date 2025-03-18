@@ -1,0 +1,652 @@
+{
+  "products": [
+    {
+      "id": 11,
+      "name": "Becks Beers Can 50CL",
+      "featured_img": "r-imgs-5-171221210888.png",
+      "category_id": 5,
+      "route": "becks-beer-can-50cl",
+      "sub_category_id": 27,
+      "brand_id": 12,
+      "created_at": "2023-09-07T11:58:28.000000Z",
+      "price_variation": [
+        {
+          "id": 608,
+          "product_id": 11,
+          "price": 59,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 1479,
+          "product_id": 11,
+          "price": 132,
+          "discount_price": 99,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 27,
+        "name": "Pilsner",
+        "route": "pilsner",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Pilsner",
+          "meta_description": "Pilsner",
+          "schema_markup": "Pilsner"
+        }
+      },
+      "brands": {
+        "id": 12,
+        "name": "Becks"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Budweiser Beer Can 50CL",
+      "featured_img": "budweiser-beer-440ml-171394700640.png",
+      "category_id": 5,
+      "route": "budweiser-beer-can-50cl",
+      "sub_category_id": 10,
+      "brand_id": 13,
+      "created_at": null,
+      "price_variation": [
+        {
+          "id": 650,
+          "product_id": 14,
+          "price": 42,
+          "discount_price": 35,
+          "offer_price": 0
+        },
+        {
+          "id": 651,
+          "product_id": 14,
+          "price": 168,
+          "discount_price": 115,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 10,
+        "name": "Lager",
+        "route": "lager",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Beer Lager",
+          "meta_description": "Beer Lager",
+          "schema_markup": "Beer Lager"
+        }
+      },
+      "brands": {
+        "id": 13,
+        "name": "Budweiser"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Budweiser Bottle 33CL",
+      "featured_img": "budweiser-330ml-169416565349.png",
+      "category_id": 5,
+      "route": "budweiser-bottle-33cl",
+      "sub_category_id": 10,
+      "brand_id": 13,
+      "created_at": "2023-09-08T09:36:21.000000Z",
+      "price_variation": [
+        {
+          "id": 64,
+          "product_id": 16,
+          "price": 42,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 613,
+          "product_id": 16,
+          "price": 168,
+          "discount_price": 115,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 10,
+        "name": "Lager",
+        "route": "lager",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Beer Lager",
+          "meta_description": "Beer Lager",
+          "schema_markup": "Beer Lager"
+        }
+      },
+      "brands": {
+        "id": 13,
+        "name": "Budweiser"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Carlsberg Beer Can 50CL",
+      "featured_img": "carlsberg-cans-500ml-169416619090.png",
+      "category_id": 5,
+      "route": "carlsberg-beer-can-50cl",
+      "sub_category_id": 27,
+      "brand_id": 14,
+      "created_at": "2023-09-08T09:45:43.000000Z",
+      "price_variation": [
+        {
+          "id": 65,
+          "product_id": 17,
+          "price": 36,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 624,
+          "product_id": 17,
+          "price": 144,
+          "discount_price": 89,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 27,
+        "name": "Pilsner",
+        "route": "pilsner",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Pilsner",
+          "meta_description": "Pilsner",
+          "schema_markup": "Pilsner"
+        }
+      },
+      "brands": {
+        "id": 14,
+        "name": "Carlsberg"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Heineken Beer Bottles 33CL",
+      "featured_img": "bee0118-17139480088.png",
+      "category_id": 5,
+      "route": "heineken-beer-bottles-33cl",
+      "sub_category_id": 10,
+      "brand_id": 15,
+      "created_at": "2023-09-08T12:51:17.000000Z",
+      "price_variation": [
+        {
+          "id": 70,
+          "product_id": 18,
+          "price": 36,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 625,
+          "product_id": 18,
+          "price": 144,
+          "discount_price": 105,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 10,
+        "name": "Lager",
+        "route": "lager",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Beer Lager",
+          "meta_description": "Beer Lager",
+          "schema_markup": "Beer Lager"
+        }
+      },
+      "brands": {
+        "id": 15,
+        "name": "Heineken"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Heineken Beer Can 33CL",
+      "featured_img": "heineken-cans-330-ml-11zon-1694178611100.png",
+      "category_id": 5,
+      "route": "heineken-beer-can-33cl",
+      "sub_category_id": 10,
+      "brand_id": 15,
+      "created_at": "2023-09-08T13:18:43.000000Z",
+      "price_variation": [
+        {
+          "id": 67,
+          "product_id": 19,
+          "price": 48,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 626,
+          "product_id": 19,
+          "price": 144,
+          "discount_price": 100,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 10,
+        "name": "Lager",
+        "route": "lager",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Beer Lager",
+          "meta_description": "Beer Lager",
+          "schema_markup": "Beer Lager"
+        }
+      },
+      "brands": {
+        "id": 15,
+        "name": "Heineken"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Peroni Beer Bottles 33CL",
+      "featured_img": "peroni-330-ml-2-169441511264.png",
+      "category_id": 5,
+      "route": "peroni-beer-bottles-33cl",
+      "sub_category_id": 10,
+      "brand_id": 16,
+      "created_at": "2023-09-11T06:52:55.000000Z",
+      "price_variation": [
+        {
+          "id": 68,
+          "product_id": 20,
+          "price": 66,
+          "discount_price": 40,
+          "offer_price": 0
+        },
+        {
+          "id": 627,
+          "product_id": 20,
+          "price": 166,
+          "discount_price": 144,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 10,
+        "name": "Lager",
+        "route": "lager",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Beer Lager",
+          "meta_description": "Beer Lager",
+          "schema_markup": "Beer Lager"
+        }
+      },
+      "brands": {
+        "id": 16,
+        "name": "Peroni"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Stella Beer Bottle 33CL",
+      "featured_img": "stella-artois-bottles-330ml-2-16944194439.png",
+      "category_id": 5,
+      "route": "stella-beer-bottle-33cl",
+      "sub_category_id": 27,
+      "brand_id": 17,
+      "created_at": "2023-09-11T08:04:23.000000Z",
+      "price_variation": [
+        {
+          "id": 69,
+          "product_id": 21,
+          "price": 48,
+          "discount_price": 35,
+          "offer_price": 0
+        },
+        {
+          "id": 628,
+          "product_id": 21,
+          "price": 133,
+          "discount_price": 120,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 27,
+        "name": "Pilsner",
+        "route": "pilsner",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Pilsner",
+          "meta_description": "Pilsner",
+          "schema_markup": "Pilsner"
+        }
+      },
+      "brands": {
+        "id": 17,
+        "name": "Stella"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Sanmiguel Pale Pilsen Can 50CL",
+      "featured_img": "sanmiguel-pale-pilsen-can-50cl-1-169442124141.png",
+      "category_id": 5,
+      "route": "sanmiguel-pale-pilsen-can-50cl",
+      "sub_category_id": 26,
+      "brand_id": 19,
+      "created_at": "2023-09-11T08:36:16.000000Z",
+      "price_variation": [
+        {
+          "id": 72,
+          "product_id": 23,
+          "price": 36,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 629,
+          "product_id": 23,
+          "price": 120,
+          "discount_price": 105,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 26,
+        "name": "Pale",
+        "route": "pale",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Pale",
+          "meta_description": "Pale",
+          "schema_markup": "Pale"
+        }
+      },
+      "brands": {
+        "id": 19,
+        "name": "Sanmiguel"
+      }
+    },
+    {
+      "id": 25,
+      "name": "Sanmiguel Pale Pilsen Bottle 33CL",
+      "featured_img": "sanmiguel-pale-pilsen-bottle-33cl-1-169442194220.png",
+      "category_id": 5,
+      "route": "sanmiguel-pale-pilsen-bottle-33cl",
+      "sub_category_id": 26,
+      "brand_id": 19,
+      "created_at": "2023-09-11T08:46:00.000000Z",
+      "price_variation": [
+        {
+          "id": 205,
+          "product_id": 25,
+          "price": 36,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 630,
+          "product_id": 25,
+          "price": 115,
+          "discount_price": 95,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 26,
+        "name": "Pale",
+        "route": "pale",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Pale",
+          "meta_description": "Pale",
+          "schema_markup": "Pale"
+        }
+      },
+      "brands": {
+        "id": 19,
+        "name": "Sanmiguel"
+      }
+    },
+    {
+      "id": 85,
+      "name": "Sanmiguel Light Can 33cl",
+      "featured_img": "featured2-1-169519561729.png",
+      "category_id": 5,
+      "route": "sanmiguel-light-can-33cl",
+      "sub_category_id": 10,
+      "brand_id": 19,
+      "created_at": "2023-09-12T12:29:00.000000Z",
+      "price_variation": [
+        {
+          "id": 140,
+          "product_id": 85,
+          "price": 42,
+          "discount_price": 25,
+          "offer_price": 0
+        },
+        {
+          "id": 631,
+          "product_id": 85,
+          "price": 115,
+          "discount_price": 90,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 10,
+        "name": "Lager",
+        "route": "lager",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Beer Lager",
+          "meta_description": "Beer Lager",
+          "schema_markup": "Beer Lager"
+        }
+      },
+      "brands": {
+        "id": 19,
+        "name": "Sanmiguel"
+      }
+    },
+    {
+      "id": 96,
+      "name": "Singha Lager Beer Bottle 33CL",
+      "featured_img": "singha-lager-beer-bottle-33cl-1-169452456069.png",
+      "category_id": 5,
+      "route": "singha-lager-beer-bottle-33cl",
+      "sub_category_id": 10,
+      "brand_id": 25,
+      "created_at": "2023-09-12T13:16:17.000000Z",
+      "price_variation": [
+        {
+          "id": 151,
+          "product_id": 96,
+          "price": 48,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 632,
+          "product_id": 96,
+          "price": 112,
+          "discount_price": 96,
+          "offer_price": 0
+        }
+      ],
+      "category": {
+        "id": 5,
+        "name": "Beer",
+        "route": "beer",
+        "title": "Your beer, <span>your way</span>",
+        "description": "<p>Indulge in the joy of beer with Royal Spirit. Explore our diverse beer selections, find the one that fits your style and mood, and start sipping and savoring and make the best of your “beer o’ clock”</p>",
+        "seo": {
+          "meta_title": "Fast Beer Delivery in Abu Dhabi",
+          "meta_description": "Looking for the best beer delivery in Abu Dhabi. We offer a wide selection, fast delivery, and even free delivery on qualifying orders. Order today",
+          "schema_markup": "Beer"
+        }
+      },
+      "sub_category": {
+        "id": 10,
+        "name": "Lager",
+        "route": "lager",
+        "title": "",
+        "description": "",
+        "seo": {
+          "meta_title": "Beer Lager",
+          "meta_description": "Beer Lager",
+          "schema_markup": "Beer Lager"
+        }
+      },
+      "brands": {
+        "id": 25,
+        "name": "Singha"
+      }
+    }
+  ]
+}
