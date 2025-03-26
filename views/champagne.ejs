@@ -18,53 +18,40 @@
     </header>
 
     <main>
-        <section class="double-search">
-            <div class="search-filter-div">
-                <h1>Filter by product</h1>
-                <ul class="search-filter">
-                    <li>
-                        <p>example</p>
-                    </li>
-                    <li>
-                        <p>example</p>
-                    </li>
-                    <li>
-                        <p>example</p>
-                    </li>
-                    <li>
-                        <p>example</p>
-                    </li>
-                    <li>
-                        <p>example</p>
-                    </li>
-                </ul>
+        <h3 class="showing-number"> Showing products 1 - 12</h3>
+
+        <section class="layout">
+            <section class="double-search">
+                <div>
+                    <%- include('includes/filter') %>
+                </div>
+            </section>
+            <div class="product-grid">
+                <% for(let i=0; i < champagnes.length; i++) { %>
+                    <div class="product">
+
+                        <a class="linkster" href="/champagne/<%=champagnes[i].route %>">
+                            <img src="/assets/champagne-pics/<%=champagnes[i].featured_img %>" alt="Product 1 Image"
+                                width="234px" height="290px">
+                            <p class="mini-titles">
+                                <%= champagnes[i].name %>
+                            </p>
+                            <p class="mini-titles">
+                                $<%= champagnes[i].price_variation.price %>
+
+                            </p>
+                        </a>
+                        <button class="cart-button"> Add to Cart </button>
+                    </div>
+                    <% } %>
             </div>
         </section>
-        <div class="product-grid">
-            <% for(let i=0; i < champagnes.length; i++) { %>
-                <div class="product">
 
-                    <a href="/champagne/<%=champagnes[i].route %>">
-                    <img src="/assets/champagne-pics/<%=champagnes[i].featured_img %>"
-                        alt="Product 1 Image" width="234px" height="290px">
-                        <p class="mini-titles">
-                            <%= champagnes[i].name %>
-                        </p>
-                        <p class="mini-titles">
-                          $<%= champagnes[i].price_variation.price %>
+        <section>
+            <%- include('includes/waiting-list.ejs') %>
 
-                        </p>
-                    </a>
-                    <button class="cart-button"> Add to Cart </button>
-                </div>
-                <% } %>
-        </div>
-
-                    <section>
-                        <%- include('includes/waiting-list.ejs') %>
-
-                    </section>
-                    <p></p>
+        </section>
+        <p></p>
     </main>
     <footer>
         <%- include('includes/bottom-bit') %>

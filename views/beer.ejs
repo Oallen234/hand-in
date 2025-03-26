@@ -17,34 +17,19 @@
         </header>
 
         <main>
+            <h3 class="showing-number"> Showing products 1 - 12</h3>
 
-            <section class="double-search">
-                <div class="search-filter-div">
-                    <h1>Filter by product</h1>
-                    <ul class="search-filter">
-                        <li>
-                            <p>example</p>
-                        </li>
-                        <li>
-                            <p>example</p>
-                        </li>
-                        <li>
-                            <p>example</p>
-                        </li>
-                        <li>
-                            <p>example</p>
-                        </li>
-                        <li>
-                            <p>example</p>
-                        </li>
-                    </ul>
-                </div>
-
+            <section class="layout">
+                <section class="double-search">
+                    <div>
+                        <%- include('includes/filter') %>
+                    </div>
+                </section>
                 <div class="product-grid">
 
                     <% for(let i=0; i < beers.length; i++) { %>
                         <div class="product">
-                            <a href="/beer/<%=beers[i].route %>">
+                            <a class="linkster" href="/beer/<%=beers[i].route %>">
                                 <img src="/assets/beer-pics/<%=beers[i].featured_img %>" alt="Product 1 Image"
                                     width="292px" height="340px">
 
@@ -62,9 +47,8 @@
                         <% } %>
 
                 </div>
-
-
             </section>
+
             <section>
                 <%- include('includes/waiting-list.ejs') %>
 

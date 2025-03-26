@@ -27,6 +27,14 @@ body {
   text-align: center;
 }
 
+.position-title-black {
+  color: #121e23;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 300%;
+  margin: auto 0;
+  text-align: center;
+}
+
 .loading-image-main {
   display: flex;
   background-image: url('https://media.istockphoto.com/id/1336275269/de/foto/stark-alkoholhaltige-getr%C3%A4nke-harte-spirituosen-spirituosen-und-destillate-werden-in-gl%C3%A4sern.jpg?s=612x612&w=0&k=20&c=sOcyFZ460FsWsXbpJ1in6brinnEq0xTKpozAxQG7Tug=');
@@ -51,6 +59,7 @@ article {
   overflow-x: scroll;
   scrollbar-width: none;
 
+
 }
 
 
@@ -66,8 +75,7 @@ article {
   text-align: center;
   overflow-y: hidden;
   gap: 2rem;
-  scroll-snap-align: center;
-  scroll-snap-type: x mandatory;
+
 
   li:not(.empty) {
     width: 18rem;
@@ -95,13 +103,14 @@ article {
   transition: transform 0.3s;
   transform-style: preserve-3d;
   max-width: none;
+  scroll-snap-align: center;
 
 }
 
 .spacey {
   color: transparent;
   scroll-snap-align: none;
-  width: 10rem;
+  width: 5rem;
 }
 
 .mini-titles {
@@ -170,19 +179,51 @@ article {
   background-color: 0.3s ease;
   cursor: pointer;
 }
+.center{
+  text-align: center;
+}
+.button-make {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 200%;
+  border-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  background-color: #121e23;
+  height: 1.4cm;
+  width: 5cm;
+  transition: color 0.3s ease;
+  background-color: 0.3s ease;
+  cursor: pointer;
+}
 
+.hr.black-line {
+  border-top: 3px solid #121e23;
+}
 
 .button-list:hover {
   color: #2a3b42;
   background-color: #f0f0f0;
 }
 
-
+.form-for-drink{
+text-align: center;
+}
 
 .product-name {
   margin-top: 5px;
   text-align: center;
 }
+
+.drink-maker {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid #121e23;
+  border-width: cover;
+  width: stretch;
+}
+
 
 .bottom-library {
   display: flex;

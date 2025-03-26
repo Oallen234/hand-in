@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/head', {title: "New Cookie | DrinkShop" }) %>
+
+    <body>
+        <%- include('../includes/navvster') %>
+
+            <main>
+                <h2 class="position-title-black">The new drinks</h2>
+
+
+                <section class="layout">
+                   
+                    <div class="product-grid">
+
+                        <% for(let i=0; i < drinks.length; i++) { %>
+                            <div class="product">
+                                <a class="linkster" href="">
+
+                                    <p class="mini-titles">
+                                        <%= drinks[i].name %>
+                                    </p>
+                                    <p class="mini-titles"> $ <%= drinks[i].priceInCents%>                                    </p>
+                                    <p class="mini-titles"> $ <%= drinks[i].slug %>                                    </p>
+
+                                </a>
+                                <a href="/drinks/edit-drinks/<%=drinks[i].slug%>"><button class="button-make"> edit </button> </a>
+                                <a href="/drinks/<%= drinks[i].slug %>/delete"what to put here"><button class="button-make" > delete </button> </a>
+
+                            </div>
+
+                            <% } %>
+                            
+
+                    </div>
+
+                </section>
+                <section class="drink-maker">
+                    <div>
+    
+                        <h1 class="position-title-black">make a drink</h1>
+                    </div>
+                    <div>
+                        <a  href="/drinks/new"><button class="button-make"> Click here</button> </a>
+                    </div>
+                </section>
+                <%- include('../includes/waiting-list.ejs') %>
+
+
+
+
+    </body>
+    <footer>
+        <%- include('../includes/bottom-bit') %>
+
+    </footer>
+
+</html>

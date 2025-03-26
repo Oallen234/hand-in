@@ -65,11 +65,18 @@
 .drink-text {
   padding: 10px 2cm;
 }
-
+.showing-number {
+padding-left: 450px;
+padding-top: 20px;}
+.layout {
+  display: flex;
+  justify-content: space-between;
+}
 .product-grid {
   display: grid;
   gap: 20px;
   padding: 1rem;
+  padding-left: 0;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: fit-content(300px);
   overflow: contain;
@@ -96,14 +103,25 @@
   
 }
 
-
+.linkster {
+  text-decoration: none;
+}
 .double-search {
   display: flex;
   flex-direction: column;
 }
 
 .search-filter-div {
-  padding-left: 2cm;
+  padding-left: 20px;
+}
+
+.brands-scroll-box {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: left;
+  text-align: left;
+  padding: 10px;
 }
 
 .search-filter {
@@ -115,7 +133,37 @@
 .search-filter li {
   margin-right: 20px;
 }
-
+.sub-butt {
+  color: #121e23;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  background-color: #121e23;
+  height: 30px;
+  width: 80px;
+  
+}
+.sub-butt:hover {
+  color: #2a3b42;
+  background-color: #f0f0f0;
+}
+.ssub-butt:clicked {
+  color: #294550;
+  background-color: #f0f0f0;
+}
+.brand-name {
+  text-decoration: none;
+  color: #121e23;
+}
+.subs-scroll-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: left;
+  padding: 10px;
+  gap: 5px;
+  padding: 0;
+}
 .cart-button {
   color: #121e23;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -128,6 +176,10 @@
   width: 180px;
 }
 
+.price-range {
+  width: 20px;
+  border-style: solid;
+}
 .cart-button:hover {
   transform: scale(1.1);
 }
@@ -158,7 +210,7 @@
 
 @media screen and (min-width: 40rem) {
   .product-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
   }
 
