@@ -3,12 +3,10 @@
 html,
 body {
   margin: 0;
-
   background-color: white;
   font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-/* Main Css */
 
 @font-face {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -58,11 +56,7 @@ article {
   max-width: none;
   overflow-x: scroll;
   scrollbar-width: none;
-
-
 }
-
-
 
 .carousel {
   width: fit-content;
@@ -86,8 +80,6 @@ article {
     animation-timeline: view(x);
     animation-range: cover 0% cover 100%;
   }
-
-
 }
 
 .floor-tile {
@@ -240,7 +232,6 @@ text-align: center;
 .library-logo {
   font-size: 200%;
   font-weight: bold;
-
 }
 
 .right-library a:visited {
@@ -289,11 +280,9 @@ text-align: center;
   .waiting-list {
     flex-direction: row;
   }
-
   .waiting-list-format {
     flex-direction: row;
   }
-
   .mini-titles-section {
     grid-template-columns: repeat(3, 1fr);
   }

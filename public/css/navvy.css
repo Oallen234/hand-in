@@ -35,7 +35,6 @@ h1 {
     padding: 1rem;
     transition: right 0.3s ease;
     display: block;
-
 }
 
 #three-lines button{
@@ -99,7 +98,6 @@ h1 {
     .navigation-bar {
         flex-direction: row;
     }
-
     .navigation-button-side {
         display: none;
     }
