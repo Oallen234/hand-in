@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <%- include('includes/head') %>
+</head>
 
-<%- include('includes/head') %>
+<body>
 
-    <body>
-
-        <header class="beer-face">
-            <%- include('includes/navvster') %>
+    <header class="beer-face">
+        <%- include('includes/navvster') %>
 
 
-                <h2 class="drink-head"> beer</h2>
+            <h2 class="drink-head"> beer</h2>
+
+
+    </header>
+
+    <main>
+        <h3 class="showing-number"> Showing products 1 - 12</h3>
+
+        <section class="layout">
+            <section class="double-search">
+                <div>
+                    <%- include('includes/filter') %>
                 </div>
+            </section>
+            <div class="product-grid">
+
+                <% for(let i=0; i < beers.length; i++) { %>
+                    <div class="product">
+                        <a class="linkster" href="/beer/<%=beers[i].route %>">
+                            <img src="/assets/beer-pics/<%=beers[i].featured_img %>" alt="Product 1 Image" width="292px"
+                                height="340px">
 
 
-        </header>
+                            <p class="mini-titles">
+                                <%= beers[i].name %>
+                            </p>
+                            <p class="mini-titles"> $ <%= beers[i].price_variation[0].price %>
 
-        <main>
-            <h3 class="showing-number"> Showing products 1 - 12</h3>
-
-            <section class="layout">
-                <section class="double-search">
-                    <div>
-                        <%- include('includes/filter') %>
+                            </p>
+                        </a>
+                        <button class="cart-button"> Add to Cart </button>
                     </div>
-                </section>
-                <div class="product-grid">
 
-                    <% for(let i=0; i < beers.length; i++) { %>
-                        <div class="product">
-                            <a class="linkster" href="/beer/<%=beers[i].route %>">
-                                <img src="/assets/beer-pics/<%=beers[i].featured_img %>" alt="Product 1 Image"
-                                    width="292px" height="340px">
+                    <% } %>
 
+            </div>
+        </section>
 
-                                <p class="mini-titles">
-                                    <%= beers[i].name %>
-                                </p>
-                                <p class="mini-titles"> $ <%= beers[i].price_variation[0].price %>
+        <section>
+            <%- include('includes/waiting-list.ejs') %>
 
-                                </p>
-                            </a>
-                            <button class="cart-button"> Add to Cart </button>
-                        </div>
+        </section>
+        <p></p>
+    </main>
+    <footer>
+        <%- include('includes/bottom-bit') %>
 
-                        <% } %>
-
-                </div>
-            </section>
-
-            <section>
-                <%- include('includes/waiting-list.ejs') %>
-
-            </section>
-            <p></p>
-        </main>
-        <footer>
-            <%- include('includes/bottom-bit') %>
-
-        </footer>
-    </body>
+    </footer>
+</body>
 
 
 </html>
