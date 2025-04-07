@@ -13,7 +13,8 @@ import { ProductSchema } from './model.js';
 
 const app = express()
 process.env.DATEBASE_PASSWORD
-mongoose.connect('mongodb://127.0.0.1:27017/drinksshop')
+const DB_URI = process.env.DB_URI
+mongoose.connect(DB_URI)
 
 // const Product = mongoose.model('Product', ProductSchema);
 

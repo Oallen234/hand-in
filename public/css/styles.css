@@ -253,6 +253,8 @@ text-align: center;
 
 .right-library {
   justify-content: left;
+  list-style-type: none;
+  list-style: none;
 }
 
 .unbullet {
