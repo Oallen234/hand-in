@@ -8,15 +8,15 @@ import champagnedata from '../jasonnn/champagne.json' with { type: "json" }
 import spiritsdata from '../jasonnn/spirits.json' with { type: "json" }
 import mongoose from 'mongoose'
 import Email from './emails.js';
-import User from './user-login.js';
-import beerProducts from './model-beer.js';
-import champagneProduct from './model-champage.js';
-import wineProduct from './model-wine.js';
-import spiritsProducts from './model-spirits.js';
+// import User from './user-login.js';
+// import beerProducts from './model-beer.js';
+// import champagneProduct from './model-champage.js';
+// import wineProduct from './model-wine.js';
+// import spiritsProducts from './model-spirits.js';
 
 // import ProductSchema from './model.js';
 import { request } from 'node:http';
-import { UserSchema } from './user-login.js';
+// import { UserSchema } from './user-login.js';
 
 const app = express()
 process.env.DATEBASE_PASSWORD
@@ -248,18 +248,18 @@ app.post('/create-account', async (request, response) => {
 
 // });
 
-app.post('/login', async (request, response) => {
-    try {
-        const { email_address, password } = request.body;
-        const user = await User.findOne({ email_address });
-        response.redirect('/');
-    }
-    catch (error) {
-        console.error(error)
-        response.send('Error: Incorrect login')
+// app.post('/login', async (request, response) => {
+//     try {
+//         const { email_address, password } = request.body;
+//         const user = await User.findOne({ email_address });
+//         response.redirect('/');
+//     }
+//     catch (error) {
+//         console.error(error)
+//         response.send('Error: Incorrect login')
 
-    }
-})
+//     }
+// })
 
 
 app.post('/drinks/new', async (request, response) => {
