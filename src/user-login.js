@@ -13,11 +13,11 @@ export default User;
 
 
 export function checkLog() {
-    if (loggedIn == true)
+    if (loggedIn == true){
         document.getElementById("sgaccount").textContent = "Account";
     document.getElementById("").textContent = "Logout";
 
-
+    }
     else {
         document.getElementById("sgaccount").textContent = "Sign In";
     document.getElementById("").textContent = "Register";
