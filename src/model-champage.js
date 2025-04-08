@@ -19,5 +19,5 @@ export const ProductSchema = new mongoose.Schema({
     brands: { type: String, required: true }
 }, { timestamps: true });
 
-const ChampagneProduct = mongoose.model('ChampagneProduct', ProductSchema);
-export default ChampagneProduct
+const champagneProduct = mongoose.model('champagneProduct', ProductSchema);
+export default champagneProduct

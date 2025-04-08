@@ -1,148 +1,247 @@
 {
   "products": [
     {
-      "id": 504,
       "name": "DELAUNOIS CHANEZ CHAMPAGNE 75CL",
       "featured_img": "untitled-1-171413076346.png",
       "route": "delaunois-chanez-champagne-75cl",
+      "price_variation": [
+        {
+          "id": 5040,
+          "product_id": 504,
+          "price": 1456,
+          "discount_price": 1300,
+          "offer_price": 0
+        },
+        {
+          "id": 5041,
+          "product_id": 504,
+          "price": 1747.2,
+          "discount_price": 1495,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "DELAUNOIS",
-      "price_variation": {
-        "price": 1456,
-        "discount_price": 1300
-      }
+      "sub_category": "Brut",
+      "brands": "DELAUNOIS"
     },
     {
-      "id": 505,
       "name": "MOET & CHANDON CHAMPAGNE 75CL",
       "featured_img": "moet-171232426431.png",
       "route": "moet-&-chandon-champagne-75cl",
+      "price_variation": [
+        {
+          "id": 5050,
+          "product_id": 505,
+          "price": 334,
+          "discount_price": 225,
+          "offer_price": 0
+        },
+        {
+          "id": 5051,
+          "product_id": 505,
+          "price": 400.8,
+          "discount_price": 258.75,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "MOET & CHANDON",
-      "price_variation": {
-        "price": 334,
-        "discount_price": 225
-      }
+      "sub_category": "Brut",
+      "brands": "MOET & CHANDON"
     },
     {
-      "id": 506,
       "name": "MOET & CHANDON IMPERIAL ICE 75CL",
       "featured_img": "12650-171232191458.png",
       "route": "moet-&-chandon-imperial-ice-75cl",
+      "price_variation": [
+        {
+          "id": 5060,
+          "product_id": 506,
+          "price": 330,
+          "discount_price": 285,
+          "offer_price": 0
+        },
+        {
+          "id": 5061,
+          "product_id": 506,
+          "price": 396,
+          "discount_price": 327.75,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "MOET & CHANDON",
-      "price_variation": {
-        "price": 330,
-        "discount_price": 285
-      }
+      "sub_category": "Ice",
+      "brands": "MOET & CHANDON"
     },
     {
-      "id": 507,
       "name": "MOET & CHANDON ROSE 75Cl",
       "featured_img": "rose-171232259983.png",
       "route": "moet-&-chandon-rose-75cl",
+      "price_variation": [
+        {
+          "id": 5070,
+          "product_id": 507,
+          "price": 360,
+          "discount_price": 340,
+          "offer_price": 0
+        },
+        {
+          "id": 5071,
+          "product_id": 507,
+          "price": 432,
+          "discount_price": 391,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "MOET & CHANDON",
-      "price_variation": {
-        "price": 360,
-        "discount_price": 340
-      }
+      "sub_category": "Rosé",
+      "brands": "MOET & CHANDON"
     },
     {
-      "id": 508,
       "name": "VEUVE CLICQUOT 75CL",
       "featured_img": "untitled-1-171413067085.png",
       "route": "veuve-clicquot-75c",
+      "price_variation": [
+        {
+          "id": 5080,
+          "product_id": 508,
+          "price": 290,
+          "discount_price": 280,
+          "offer_price": 0
+        },
+        {
+          "id": 5081,
+          "product_id": 508,
+          "price": 348,
+          "discount_price": 322,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "VEUVE CLICQUOT",
-      "price_variation": {
-        "price": 290,
-        "discount_price": 280
-      }
+      "sub_category": "Brut",
+      "brands": "VEUVE CLICQUOT"
     },
     {
-      "id": 509,
       "name": "VEUVE CLICQUOT ROSE 75CL",
       "featured_img": "rose2-171232369548.png",
       "route": "veuve-clicquot-rose-75cl",
+      "price_variation": [
+        {
+          "id": 5090,
+          "product_id": 509,
+          "price": 375,
+          "discount_price": 340,
+          "offer_price": 0
+        },
+        {
+          "id": 5091,
+          "product_id": 509,
+          "price": 450,
+          "discount_price": 391,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "VEUVE CLICQUOT",
-      "price_variation": {
-        "price": 375,
-        "discount_price": 340
-      }
+      "sub_category": "Rosé",
+      "brands": "VEUVE CLICQUOT"
     },
     {
-      "id": 888,
       "name": "G.GOBILLARD BLANC DE BLANCS  BRUT 75CL",
       "featured_img": "oqik4rc0treohphf7-vcog-pb-600x600-171775457643.png",
       "route": "g.gobillard-blanc-de-blancs-brut-75cl",
+      "price_variation": [
+        {
+          "id": 8880,
+          "product_id": 888,
+          "price": 344,
+          "discount_price": 239,
+          "offer_price": 0
+        },
+        {
+          "id": 8881,
+          "product_id": 888,
+          "price": 412.8,
+          "discount_price": 274.85,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "G.GOBILLARD",
-      "price_variation": {
-        "price": 344,
-        "discount_price": 239
-      }
+      "sub_category": "Blanc de Blancs",
+      "brands": "G.GOBILLARD"
     },
     {
-      "id": 889,
       "name": "G.GOBILLARD BRUT- L AUTHENTIQUE 75CL",
       "featured_img": "15455054266398-171775467259.webp",
       "route": "g.gobillard-brut-l-authentique-75cl",
+      "price_variation": [
+        {
+          "id": 8890,
+          "product_id": 889,
+          "price": 546,
+          "discount_price": 249,
+          "offer_price": 0
+        },
+        {
+          "id": 8891,
+          "product_id": 889,
+          "price": 655.2,
+          "discount_price": 286.35,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "G.GOBILLARD",
-      "price_variation": {
-        "price": 546,
-        "discount_price": 249
-      }
+      "sub_category": "Brut",
+      "brands": "G.GOBILLARD"
     },
     {
-      "id": 919,
       "name": "PROSECCO DOC FRANZINI-75CL",
       "featured_img": "fidbtciv-proseccodocbrut-demeter-web-2-534x800-removebg-preview-1717761537100.webp",
       "route": "prosecco-doc-franzini-75cl",
+      "price_variation": [
+        {
+          "id": 9190,
+          "product_id": 919,
+          "price": 50,
+          "discount_price": 39,
+          "offer_price": 0
+        },
+        {
+          "id": 9191,
+          "product_id": 919,
+          "price": 60,
+          "discount_price": 44.85,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Champagne",
-        "description": ""
+        "description": "<p>Elevate your celebrations with Royal Spirit's exquisite champagne collection. From crisp bruts to delicate rosés, discover the perfect bottle to toast life's special moments and create unforgettable memories.</p>"
       },
-      "sub_category": null,
-      "brand": "Ita Prosecco",
-      "price_variation": {
-        "price": 50,
-        "discount_price": 39
-      }
+      "sub_category": "Prosecco",
+      "brands": "Ita Prosecco"
     }
   ]
 }

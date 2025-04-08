@@ -1,217 +1,328 @@
-{"products": [
+{
+  "products": [
     {
-      "id": 26,
       "name": "Coppa Sex On The Beach 10%Vol 70cl",
       "featured_img": "coppa-1-1-1-169442591729.png",
       "route": "coppa-sex-on-the-beach-10-vol-70cl",
+      "price_variation": [
+        {
+          "id": 260,
+          "product_id": 26,
+          "price": 55,
+          "discount_price": 45,
+          "offer_price": 0
+        },
+        {
+          "id": 261,
+          "product_id": 26,
+          "price": 66,
+          "discount_price": 51.75,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Ready to Drink",
-      "brand": "Coppa",
-      "price_variation": 
-        {
-          "price": 55,
-          "discount_price": 45
-        }
-      
+      "brands": "Coppa"
     },
     {
-      "id": 27,
       "name": "Coppa Tequila Sunrise 10%Vol 70cl",
       "featured_img": "coppa-1-1-1-169442591729.png",
       "route": "coppa-tequila-sunrise-10-vol-70cl",
+      "price_variation": [
+        {
+          "id": 270,
+          "product_id": 27,
+          "price": 55,
+          "discount_price": 45,
+          "offer_price": 0
+        },
+        {
+          "id": 271,
+          "product_id": 27,
+          "price": 66,
+          "discount_price": 51.75,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Ready to Drink",
-      "brand": "Coppa",
-      "price_variation": 
-        {
-          "price": 55,
-          "discount_price": 45
-        }
-      
+      "brands": "Coppa"
     },
     {
-      "id": 28,
       "name": "Coppa Mojito 10%Vol 70cl",
       "featured_img": "coppa-1-1-1-169442591729.png",
       "route": "coppa-mojito-10-vol-70cl",
+      "price_variation": [
+        {
+          "id": 280,
+          "product_id": 28,
+          "price": 55,
+          "discount_price": 45,
+          "offer_price": 0
+        },
+        {
+          "id": 281,
+          "product_id": 28,
+          "price": 66,
+          "discount_price": 51.75,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Ready to Drink",
-      "brand": "Coppa",
-      "price_variation": 
-        {
-          "price": 55,
-          "discount_price": 45
-        }
-      
+      "brands": "Coppa"
     },
     {
-      "id": 31,
       "name": "Label Scotch Whiskey",
       "featured_img": "label-5-scotch-whisky-1ltr-16946797092.png",
       "route": "label-5-scotch-whiskey",
+      "price_variation": [
+        {
+          "id": 310,
+          "product_id": 31,
+          "price": 40,
+          "discount_price": 35,
+          "offer_price": 0
+        },
+        {
+          "id": 311,
+          "product_id": 31,
+          "price": 48,
+          "discount_price": 40.25,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Whiskey and Burbon",
-      "brand": "Label 5",
-      "price_variation": 
-        {
-          "price": 40,
-          "discount_price": 35
-        }
-      
+      "brands": "Label 5"
     },
     {
-      "id": 32,
       "name": "John Barr Finest Red 1Ltr",
       "featured_img": "john-barr-finest-red-1ltr-1-169467980553.png",
       "route": "john-barr-finest-red-1ltr",
+      "price_variation": [
+        {
+          "id": 320,
+          "product_id": 32,
+          "price": 40,
+          "discount_price": 30,
+          "offer_price": 0
+        },
+        {
+          "id": 321,
+          "product_id": 32,
+          "price": 48,
+          "discount_price": 34.5,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Whiskey and Burbon",
-      "brand": "John Barr",
-      "price_variation": 
-        {
-          "price": 40,
-          "discount_price": 30
-        }
-      
+      "brands": "John Barr"
     },
     {
-      "id": 33,
       "name": "High Commisioner Whisky 1Ltr",
       "featured_img": "high-commisioner-whisky-1ltr-ugt-169467992535.png",
       "route": "high-commisioner-whisky-1ltr",
+      "price_variation": [
+        {
+          "id": 330,
+          "product_id": 33,
+          "price": 25,
+          "discount_price": 18,
+          "offer_price": 0
+        },
+        {
+          "id": 331,
+          "product_id": 33,
+          "price": 30,
+          "discount_price": 20.7,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Whiskey and Burbon",
-      "brand": "High Commisioner",
-      "price_variation": 
-        {
-          "price": 25,
-          "discount_price": 18
-        }
-      
+      "brands": "High Commisioner"
     },
     {
-      "id": 39,
       "name": "VAT - 69 -1LTR",
       "featured_img": "vat-69-1ltr-169468056859.png",
       "route": "vat--69-1ltr",
+      "price_variation": [
+        {
+          "id": 390,
+          "product_id": 39,
+          "price": 50,
+          "discount_price": 40,
+          "offer_price": 0
+        },
+        {
+          "id": 391,
+          "product_id": 39,
+          "price": 60,
+          "discount_price": 46,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Whiskey and Burbon",
-      "brand": "VAT",
-      "price_variation": 
-        {
-          "price": 50,
-          "discount_price": 40
-        }
-      
+      "brands": "VAT"
     },
     {
-      "id": 40,
       "name": "The Generation Premium Blended Whisky",
       "featured_img": "the-generation-premium-blended-whisky-75cl-169468071997.png",
       "route": "the-generation-premium-blended-whisky",
+      "price_variation": [
+        {
+          "id": 400,
+          "product_id": 40,
+          "price": 50,
+          "discount_price": 40,
+          "offer_price": 0
+        },
+        {
+          "id": 401,
+          "product_id": 40,
+          "price": 60,
+          "discount_price": 46,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Whiskey and Burbon",
-      "brand": "The Generation",
-      "price_variation":  {
-        "price": 50,
-        "discount_price": 40
-      }
+      "brands": "The Generation"
     },
     {
-      "id": 41,
       "name": "THE BOTANIST ISLAY DRY GIN-70CL",
       "featured_img": "the-botanist-islay-dry-gin-70cl-1-169468141623.png",
       "route": "the-botanist-islay-dry-gin-70cl",
+      "price_variation": [
+        {
+          "id": 410,
+          "product_id": 41,
+          "price": 130,
+          "discount_price": 99,
+          "offer_price": 0
+        },
+        {
+          "id": 411,
+          "product_id": 41,
+          "price": 156,
+          "discount_price": 113.85,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Gin",
-      "brand": "The Botanisy",
-      "price_variation": 
-        {
-          "price": 130,
-          "discount_price": 99
-        }
-      
+      "brands": "The Botanisy"
     },
     {
-      "id": 42,
       "name": "TEACHERS HIGHLAND CREAM -1LTR ",
       "featured_img": "teachers-highland-cream-1ltr-169468155051.png",
       "route": "teachers-highland-cream-1ltr",
+      "price_variation": [
+        {
+          "id": 420,
+          "product_id": 42,
+          "price": 55,
+          "discount_price": 45,
+          "offer_price": 0
+        },
+        {
+          "id": 421,
+          "product_id": 42,
+          "price": 66,
+          "discount_price": 51.75,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Whiskey and Burbon",
-      "brand": "Teachers",
-      "price_variation": 
-        {
-          "price": 55,
-          "discount_price": 45
-        }
-      
+      "brands": "Teachers"
     },
     {
-      "id": 43,
       "name": "TANQUERAY LONDON DRY GIN 75CL",
       "featured_img": "tanqueray-london-dry-gin-75cl-1-169468163778.png",
       "route": "tanqueray-london-dry-gin-75cl",
+      "price_variation": [
+        {
+          "id": 430,
+          "product_id": 43,
+          "price": 80,
+          "discount_price": 60,
+          "offer_price": 0
+        },
+        {
+          "id": 431,
+          "product_id": 43,
+          "price": 96,
+          "discount_price": 69,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Gin",
-      "brand": "TANQUERAY",
-      "price_variation": 
-        {
-          "price": 80,
-          "discount_price": 60
-        }
-      
+      "brands": "TANQUERAY"
     },
     {
-      "id": 45,
       "name": "STOLICHNAYA PREMIUM 1 Ltr",
       "featured_img": "stolichnaya-premium-75cl-1-169468199524.png",
       "route": "stolichnaya-premium-1-ltr",
+      "price_variation": [
+        {
+          "id": 450,
+          "product_id": 45,
+          "price": 60,
+          "discount_price": 40,
+          "offer_price": 0
+        },
+        {
+          "id": 451,
+          "product_id": 45,
+          "price": 72,
+          "discount_price": 46,
+          "offer_price": 0
+        }
+      ],
       "category": {
         "name": "Spirit",
         "description": "For the true connoisseur, Royal Spirit offers an enticing range of spirits crafted to perfection. From classics to hidden gems, we bring you spirits to explore, savor and choose the ones that perfectly complement your taste and style."
       },
       "sub_category": "Vodka",
-      "brand": "Stolichnaya",
-      "price_variation": 
-        {
-          "price": 60,
-          "discount_price": 40
-        }
-      
+      "brands": "Stolichnaya"
     }
   ]
 }

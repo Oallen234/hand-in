@@ -12,7 +12,7 @@ import User from './user-login.js';
 import beerProducts from './model-beer.js';
 import champagneProduct from './model-champage.js';
 import wineProduct from './model-wine.js';
-import spiritsProduct from './model-spirits.js';
+import spiritsProducts from './model-spirits.js';
 
 // import ProductSchema from './model.js';
 import { request } from 'node:http';
@@ -99,22 +99,27 @@ app.get('/beer/:id', (request, response) => {
     })
 })
 
+
+
+
 app.get("/seeding", async (request, response) => {
-    for (const beer of beerdata.beerProducts) {
-        const product = new beerProducts({
-            name: beer.name,
-            featured_img: beer.featured_img,
-            route: beer.route,
-            price_variation: beer.price_variation,
-            category: beer.category,
-            sub_category: beer.sub_category,
-            brands: beer.brands,
+    for (const spirits of spiritsdata.products) {
+        const product = new spiritsProducts({
+            name: spirits.name,
+            featured_img: spirits.featured_img,
+            route: spirits.route,
+            price_variation: spirits.price_variation,
+            category: spirits.category,
+            sub_category: spirits.sub_category,
+            brands: spirits.brands,
 
         })
 
         await product.save()
     }
+    response.send("lmao")
 })
+
 
 
 
@@ -247,7 +252,6 @@ app.post('/login', async (request, response) => {
     try {
         const { email_address, password } = request.body;
         const user = await User.findOne({ email_address });
-        loggedIn == true
         response.redirect('/');
     }
     catch (error) {
