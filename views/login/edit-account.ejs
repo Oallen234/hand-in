@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/head', {title: "New Drink | DrinkShop" }) %>
+
+    <body>
+        <%- include('../includes/navvster') %>
+
+            <form class="form-for-user" action="/create-account/edit" method="POST">
+                <input type="text" value="<%= user.name %>" name="name" placeholder="name" required /><br />
+                <input type="date" value="<%= user.age %>" name="age" placeholder="age" required /><br />
+                <input type="email" value="<%= user.email_address %>" name="email_address"
+                    placeholder="email_address" /><br />
+                <input type="password" value="<%= user.password %>" name="password" placeholder="password"
+                    required /><br />
+
+                <button class="button-make">Save Account</button>
+            </form>
+
+
+            <%- include('../includes/waiting-list.ejs') %>
+
+
+
+
+    </body>
+    <%- include('../includes/bottom-bit') %>
+
+
+</html>

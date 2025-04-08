@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/head', {title: "New Account | DrinkShop" }) %>
+
+    <body>
+        <%- include('../includes/navvster') %>
+            <h1>Register</h1>
+            <form class="form-for-user" action="/create-account" method="POST">
+                <input type="text" name="name" placeholder="name" required /><br />
+                <input type="date" name="age" placeholder="age" required /><br />
+                <input type="email" name="email_address" placeholder="email_address" /><br />
+                <input type="password" name="password" placeholder="password" required /><br />
+
+                <button class="button-make">Create</button>
+            </form>
+
+
+            <%- include('../includes/waiting-list.ejs') %>
+
+
+
+                <%- include('../includes/bottom-bit') %>
+
+    </body>
+
+
+</html>

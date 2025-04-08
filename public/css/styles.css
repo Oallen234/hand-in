@@ -1,16 +1,13 @@
 /* CSS Reset */
 
-html,
 body {
   margin: 0;
   background-color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif
-}
-
-
-@font-face {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  min-height: 100dvh;
 }
+
+
 
 .mini-titles-section {
   display: flex;
@@ -32,6 +29,8 @@ body {
   margin: auto 0;
   text-align: center;
 }
+
+
 
 .loading-image-main {
   display: flex;
@@ -171,9 +170,11 @@ article {
   background-color: 0.3s ease;
   cursor: pointer;
 }
-.center{
+
+.center {
   text-align: center;
 }
+
 .button-make {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #f0f0f0;
@@ -198,8 +199,8 @@ article {
   background-color: #f0f0f0;
 }
 
-.form-for-drink{
-text-align: center;
+.form-for-drink {
+  text-align: center;
 }
 
 .product-name {
@@ -226,6 +227,7 @@ text-align: center;
   background-color: #121e23;
   flex-direction: row;
   padding: 2rem;
+  margin-top: auto;
 }
 
 
@@ -282,9 +284,11 @@ text-align: center;
   .waiting-list {
     flex-direction: row;
   }
+
   .waiting-list-format {
     flex-direction: row;
   }
+
   .mini-titles-section {
     grid-template-columns: repeat(3, 1fr);
   }
