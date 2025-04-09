@@ -6,7 +6,7 @@ const PriceVariationSchema = new mongoose.Schema({
     offer_price: { type: Number, default: 0 }
 });
 
-export const ProductSchema = new mongoose.Schema({
+export const beerProductSchema = new mongoose.Schema({
     name: { type: String, required: true },
     featured_img: { type: String, required: true },
     route: { type: String, required: true, unique: true },
@@ -19,5 +19,5 @@ export const ProductSchema = new mongoose.Schema({
     brands: { type: String, required: true }
 }, { timestamps: true });
 
-const beerProducts = mongoose.model('beerProducts', ProductSchema);
+const beerProducts = mongoose.model('beerProducts', beerProductSchema);
 export default beerProducts

@@ -7,7 +7,13 @@ import winedata from '../jasonnn/wine.json' with { type: "json" }
 import champagnedata from '../jasonnn/champagne.json' with { type: "json" }
 import spiritsdata from '../jasonnn/spirits.json' with { type: "json" }
 import mongoose from 'mongoose'
+import bcrypt from 'bcrypt'
+import { beerProductSchema } from './model-beer.js';
+import { wineProductSchema } from './model-wine.js';
+import { spiritsProductSchema } from './model-spirits.js';
+import { champagneProductSchema } from './model-champage.js';
 import Email from './emails.js';
+// import loginRouter from './user-login.js'
 // import User from './user-login.js';
 // import beerProducts from './model-beer.js';
 // import champagneProduct from './model-champage.js';
@@ -32,6 +38,15 @@ const drinksSchema = new mongoose.Schema({
     isInStock: { type: Boolean, default: true, required: true }
 })
 const Drinks = mongoose.model('Drink', drinksSchema)
+
+const beerProducts = mongoose.model('beerProducts', beerProductSchema);
+
+const wineProducts = mongoose.model('wineProducts', wineProductSchema);
+
+const spiritsProducts = mongoose.model('spiritsProducts', spiritsProductSchema);
+
+const champagneProduct = mongoose.model('champagneProduct', champagneProductSchema);
+
 
 app.set('view engine', 'ejs');
 app.set('views', './views')
@@ -102,23 +117,23 @@ app.get('/beer/:id', (request, response) => {
 
 
 
-app.get("/seeding", async (request, response) => {
-    for (const spirits of spiritsdata.products) {
-        const product = new spiritsProducts({
-            name: spirits.name,
-            featured_img: spirits.featured_img,
-            route: spirits.route,
-            price_variation: spirits.price_variation,
-            category: spirits.category,
-            sub_category: spirits.sub_category,
-            brands: spirits.brands,
+// app.get("/seeding", async (request, response) => {
+//     for (const spirits of spiritsdata.products) {
+//         const product = new spiritsProducts({
+//             name: spirits.name,
+//             featured_img: spirits.featured_img,
+//             route: spirits.route,
+//             price_variation: spirits.price_variation,
+//             category: spirits.category,
+//             sub_category: spirits.sub_category,
+//             brands: spirits.brands,
 
-        })
+//         })
 
-        await product.save()
-    }
-    response.send("lmao")
-})
+//         await product.save()
+//     }
+//     response.send("lmao")
+// })
 
 
 
@@ -209,26 +224,28 @@ app.get('/community', (request, response) => {
     response.render('community')
 })
 
-app.post('/create-account', async (request, response) => {
-    try {
-        console.log(request.body);
+// app.post('/create-account', async (request, response) => {
+//     try {
+//         console.log(request.body);
 
-        const user = new User({
-            name: request.body.name,
-            email_address: request.body.email_address,
-            age: request.body.age,
-            password: request.body.password
-        })
-        await user.save()
-        response.redirect('login')
-    }
-    catch (error) {
-        console.error(error)
-        response.send('Error: The account could not be created. Maybe it wasnt creative enough')
-    }
-})
+//         const saltRounds = 10;
+//         const passwordHash = await bcrypt.hash(request.body.password, saltRounds)
 
+//         const user = new User({
+//             name: request.body.name,
+//             email_address: request.body.email_address,
+//             age: request.body.age,
+//             passwordHash: passwordHash        })
+//         await user.save()
+//         response.redirect('login')
+//     }
+//     catch (error) {
+//         console.error(error)
+//         response.send('Error: The account could not be created. Maybe it wasnt creative enough')
+//     }
+// })
 
+// app.use(loginRouter);
 
 // app.get('/edit-account', async (request, response) => {
 //     const slug = request.params.slug
@@ -311,20 +328,20 @@ app.get('/drinks/edit-drinks/:slug', async (request, response) => {
 })
 
 
-app.get('/create-account', (request, response) => {
-    response.render('login/create-account')
-})
+// app.get('/create-account', (request, response) => {
+//     response.render('login/create-account')
+// })
 app.get('/test', (request, response) => {
     response.render('test')
 })
 
-app.get('/edit-account', (request, response) => {
-    response.render('login/edit-account')
-})
+// app.get('/edit-account', (request, response) => {
+//     response.render('login/edit-account')
+// })
 
-app.get('/login', (request, response) => {
-    response.render('login/login')
-})
+// app.get('/login', (request, response) => {
+//     response.render('login/login')
+// })
 
 app.get('/drinks/new', (request, response) => {
     response.render('drinks/drinker')

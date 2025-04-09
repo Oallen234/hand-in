@@ -1,10 +1,8 @@
 import mongoose from 'mongoose'
-
 // export const UserSchema = new mongoose.Schema({
 
 //     name: { type: String, required: true },
 //     email_address: { type: String, required: true },
-//     password: { type: String, required: true },
 //     age: { type: Date, required: true }
 // });
 // const User = mongoose.model('User', UserSchema)
@@ -14,10 +12,10 @@ import mongoose from 'mongoose'
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const loginRouter = require('express').Router()
-const User = require('/user-login')
+const User = require('./user')
 
 loginRouter.post('/login', async (request, response) => {
-  const { email_address, password } = request.body
+  const { email_address, name, age, password } = request.body
 
   const user = await User.findOne({ email_address })
   const passwordCorrect = user === null
@@ -31,7 +29,7 @@ loginRouter.post('/login', async (request, response) => {
   }
 
   const userForToken = {
-    username: user.username,
+    email_address: user.email_address,
     id: user._id,
   }
 
@@ -39,7 +37,7 @@ loginRouter.post('/login', async (request, response) => {
 
   response
     .status(200)
-    .send({ token, username: user.username, name: user.name })
+    .send({ token, email_address: user.email_address, name: user.name, age: user.age, })
 })
 
 module.exports = loginRouter
