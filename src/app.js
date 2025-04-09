@@ -328,9 +328,9 @@ app.get('/drinks/edit-drinks/:slug', async (request, response) => {
 })
 
 
-// app.get('/create-account', (request, response) => {
-//     response.render('login/create-account')
-// })
+app.get('/create-account', (request, response) => {
+    response.render('login/create-account')
+})
 app.get('/test', (request, response) => {
     response.render('test')
 })
@@ -339,9 +339,9 @@ app.get('/test', (request, response) => {
 //     response.render('login/edit-account')
 // })
 
-// app.get('/login', (request, response) => {
-//     response.render('login/login')
-// })
+app.get('/login', (request, response) => {
+    response.render('login/login')
+})
 
 app.get('/drinks/new', (request, response) => {
     response.render('drinks/drinker')
