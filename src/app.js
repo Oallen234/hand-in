@@ -12,9 +12,10 @@ import { beerProductSchema } from './model-beer.js';
 import { wineProductSchema } from './model-wine.js';
 import { spiritsProductSchema } from './model-spirits.js';
 import { champagneProductSchema } from './model-champage.js';
+import jwt from 'jsonwebtoken';
 import Email from './emails.js';
 // import loginRouter from './user-login.js'
-// import User from './user-login.js';
+import { User } from './user.js';
 // import beerProducts from './model-beer.js';
 // import champagneProduct from './model-champage.js';
 // import wineProduct from './model-wine.js';
@@ -209,7 +210,10 @@ app.get('/champagne', (request, response) => {
 })
 
 app.get('/', (request, response) => {
-    response.render('homepage')
+
+    const isLoggedIn = true
+
+    response.render('homepage', {isLoggedIn : isLoggedIn})
 })
 
 
@@ -224,59 +228,68 @@ app.get('/community', (request, response) => {
     response.render('community')
 })
 
-// app.post('/create-account', async (request, response) => {
-//     try {
-//         console.log(request.body);
+// MARK: - Authentication
 
-//         const saltRounds = 10;
-//         const passwordHash = await bcrypt.hash(request.body.password, saltRounds)
-
-//         const user = new User({
-//             name: request.body.name,
-//             email_address: request.body.email_address,
-//             age: request.body.age,
-//             passwordHash: passwordHash        })
-//         await user.save()
-//         response.redirect('login')
-//     }
-//     catch (error) {
-//         console.error(error)
-//         response.send('Error: The account could not be created. Maybe it wasnt creative enough')
-//     }
-// })
-
-// app.use(loginRouter);
-
-// app.get('/edit-account', async (request, response) => {
-//     const slug = request.params.slug
-
-//     try {
-//         const slug = request.params.slug
-//         const user = await User.findOne({ user: User }).exec()
-//         response.render('login/edit-account', { user: User });
-
-//     }
+app.post('/create-account', async (request, response) => {
+    try {
 
 
-//     catch (error) {
-//         console.error(error);
-//         response.status(500).send('Error loading edit account page');
-//     }
+        const { email_address, name, age, password } = request.body
 
-// });
+        const saltRounds = 10
+        const passwordHash = await bcrypt.hash(password, saltRounds)
 
-// app.post('/login', async (request, response) => {
-//     try {
-//         const { email_address, password } = request.body;
-//         const user = await User.findOne({ email_address });
-//         response.redirect('/');
-//     }
-//     catch (error) {
-//         console.error(error)
-//         response.send('Error: Incorrect login')
+        const user = new User({
+            email_address,
+            name,
+            age,
+            passwordHash,
+        })
 
-//     }
-// })
+        const savedUser = await user.save()
+
+        response.status(201).redirect("/login")
+    }
+    catch (error) {
+        console.error(error)
+        response.send('Error: The account could not be created. Maybe it wasnt creative enough')
+    }
+})
+
+app.post('/login', async (request, response) => {
+    const { email_address, password } = request.body
+  
+    const user = await User.findOne({ email_address })
+    const passwordCorrect = user === null
+      ? false
+      : await bcrypt.compare(password, user.passwordHash)
+  
+    if (!(user && passwordCorrect)) {
+      return response.status(401).json({
+        error: 'invalid username or password',
+        
+      }, response.redirect('/login')
+  )
+    }
+  
+    const userForToken = {
+      email_address: user.email_address,
+      id: user._id,
+    }
+  
+    const token = jwt.sign(userForToken, process.env.SECRET)
+    
+  
+    response
+      .status(200)
+      response.cookie('token', token, {
+        httpOnly: true,
+        maxAge: 24 * 60 * 60 * 1000,
+      })
+      .redirect('/')
+  })
+  
+
 
 
 app.post('/drinks/new', async (request, response) => {
