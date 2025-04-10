@@ -14,6 +14,7 @@ import { spiritsProductSchema } from './model-spirits.js';
 import { champagneProductSchema } from './model-champage.js';
 import jwt from 'jsonwebtoken';
 import Email from './emails.js';
+import cookieParser from 'cookie-parser'
 // import loginRouter from './user-login.js'
 import { User } from './user.js';
 // import beerProducts from './model-beer.js';
@@ -52,7 +53,7 @@ const champagneProduct = mongoose.model('champagneProduct', champagneProductSche
 app.set('view engine', 'ejs');
 app.set('views', './views')
 
-
+app.use(cookieParser)
 app.use(logger)
 
 app.use('/assets', express.static('public'))
@@ -93,10 +94,27 @@ app.get('/search', (request, response) => {
     response.send(`you have searched ${userSearch}`)
 })
 
-app.get('/products-beer', (request, response) => {
-    response.render('products-beer')
-})
+// MARK: SEEDING
 
+// app.get("/seeding", async (request, response) => {
+//     for (const spirits of spiritsdata.products) {
+//         const product = new spiritsProducts({
+//             name: spirits.name,
+//             featured_img: spirits.featured_img,
+//             route: spirits.route,
+//             price_variation: spirits.price_variation,
+//             category: spirits.category,
+//             sub_category: spirits.sub_category,
+//             brands: spirits.brands,
+
+//         })
+
+//         await product.save()
+//     }
+//     response.send("lmao")
+// })
+
+// MARK: Drinks data processing stuff
 
 app.get('/beer/:id', (request, response) => {
     const slug = request.params.id
@@ -118,34 +136,6 @@ app.get('/beer/:id', (request, response) => {
 
 
 
-// app.get("/seeding", async (request, response) => {
-//     for (const spirits of spiritsdata.products) {
-//         const product = new spiritsProducts({
-//             name: spirits.name,
-//             featured_img: spirits.featured_img,
-//             route: spirits.route,
-//             price_variation: spirits.price_variation,
-//             category: spirits.category,
-//             sub_category: spirits.sub_category,
-//             brands: spirits.brands,
-
-//         })
-
-//         await product.save()
-//     }
-//     response.send("lmao")
-// })
-
-
-
-
-
-
-app.get('/beer', (request, response) => {
-
-    response.render('beer', { beers: beerdata.products })
-})
-
 app.get('/wine/:id', (request, response) => {
     const slug = request.params.id
     const wine = winedata.products.find(wine => wine.route === slug)
@@ -163,9 +153,7 @@ app.get('/wine/:id', (request, response) => {
 })
 
 
-app.get('/wine', (request, response) => {
-    response.render('wine', { wines: winedata.products })
-})
+
 
 app.get('/spirits/:id', (request, response) => {
     const slug = request.params.id
@@ -184,9 +172,6 @@ app.get('/spirits/:id', (request, response) => {
 })
 
 
-app.get('/spirits', (request, response) => {
-    response.render('spirits', { spiritss: spiritsdata.products })
-})
 
 app.get('/champagne/:id', (request, response) => {
     const slug = request.params.id
@@ -205,28 +190,7 @@ app.get('/champagne/:id', (request, response) => {
 })
 
 
-app.get('/champagne', (request, response) => {
-    response.render('champagne', { champagnes: champagnedata.products })
-})
 
-app.get('/', (request, response) => {
-
-    const isLoggedIn = true
-
-    response.render('homepage', {isLoggedIn : isLoggedIn})
-})
-
-
-app.get('/products-wine', (request, response) => {
-    response.render('products-wine')
-})
-
-
-
-
-app.get('/community', (request, response) => {
-    response.render('community')
-})
 
 // MARK: - Authentication
 
@@ -258,39 +222,48 @@ app.post('/create-account', async (request, response) => {
 
 app.post('/login', async (request, response) => {
     const { email_address, password } = request.body
-  
+
     const user = await User.findOne({ email_address })
     const passwordCorrect = user === null
-      ? false
-      : await bcrypt.compare(password, user.passwordHash)
-  
+        ? false
+        : await bcrypt.compare(password, user.passwordHash)
+
     if (!(user && passwordCorrect)) {
-      return response.status(401).json({
-        error: 'invalid username or password',
-        
-      }, response.redirect('/login')
-  )
+        return response.status(401).json({
+            error: 'invalid username or password',
+
+        }, response.redirect('/login')
+        )
     }
-  
+
     const userForToken = {
-      email_address: user.email_address,
-      id: user._id,
+        email_address: user.email_address,
+        id: user._id,
     }
-  
+
     const token = jwt.sign(userForToken, process.env.SECRET)
-    
-  
+
+
     response
-      .status(200)
-      response.cookie('token', token, {
+        .status(200)
+    response.cookie('token', token, {
         httpOnly: true,
-        maxAge: 24 * 60 * 60 * 1000,
-      })
-      .redirect('/')
-  })
-  
+        maxAge: 24 * 60 * 30,
+    })
+        .redirect('/')
+})
 
 
+app.get('/logout', async (request, response) => {
+
+    response
+        .clearCookie('token')
+        .redirect('/')
+
+
+})
+
+// MARK: - drink stuff
 
 app.post('/drinks/new', async (request, response) => {
     try {
@@ -340,30 +313,6 @@ app.get('/drinks/edit-drinks/:slug', async (request, response) => {
 
 })
 
-
-app.get('/create-account', (request, response) => {
-    response.render('login/create-account')
-})
-app.get('/test', (request, response) => {
-    response.render('test')
-})
-
-// app.get('/edit-account', (request, response) => {
-//     response.render('login/edit-account')
-// })
-
-app.get('/login', (request, response) => {
-    response.render('login/login')
-})
-
-app.get('/drinks/new', (request, response) => {
-    response.render('drinks/drinker')
-})
-
-
-
-
-
 app.post('/drinks/:slug', async (request, response) => {
     try {
 
@@ -391,6 +340,66 @@ app.get('/drinks/:slug/delete', async (request, response) => {
         response.send('Error: No drink was deleted.')
     }
 })
+
+
+// MARK: Page Rendering
+app.get('/create-account', (request, response) => {
+    response.render('login/create-account')
+})
+app.get('/test', (request, response) => {
+    response.render('test')
+})
+
+// app.get('/edit-account', (request, response) => {
+//     response.render('login/edit-account')
+// })
+
+app.get('/beer', (request, response) => {
+
+    response.render('beer', { beers: beerdata.products })
+})
+
+app.get('/login', (request, response) => {
+    response.render('login/login')
+})
+
+app.get('/drinks/new', (request, response) => {
+    response.render('drinks/drinker')
+})
+
+
+app.get('/champagne', (request, response) => {
+    response.render('champagne', { champagnes: champagnedata.products })
+})
+
+
+app.get('/', (request, response) => {
+    const token = request.cookies;
+
+
+    response.render('homepage', {
+        isLoggedIn: token,
+    });
+});
+
+app.get('/products-wine', (request, response) => {
+    response.render('products-wine')
+})
+
+app.get('/products-beer', (request, response) => {
+    response.render('products-beer')
+})
+
+app.get('/community', (request, response) => {
+    response.render('community')
+})
+app.get('/wine', (request, response) => {
+    response.render('wine', { wines: winedata.products })
+})
+app.get('/spirits', (request, response) => {
+    response.render('spirits', { spiritss: spiritsdata.products })
+})
+
 
 app.all('*', (req, res) => {
     if (req.accepts('html')) {

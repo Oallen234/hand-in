@@ -31,17 +31,20 @@
 
         <li class="dropdown">
         <% if(isLoggedIn){ %>
-            <h1>foo</h1>
+            <a href="javascript:void(0)" id="sgaccount" class="dropbtn">Sign Out</a>
+            <div class="dropdown-content">
+                <a href="/logout">Logout</a>
+            </div>
           <% } else{ %>  
-            <h1>bar</h1>
-         <% } %>
-        
-
             <a href="javascript:void(0)" id="sgaccount" class="dropbtn">Sign In</a>
             <div class="dropdown-content">
                 <a href="/login">Login</a>
                 <a href="/create-account">Register</a>
             </div>
+         <% } %>
+        
+
+            
            
         </li>
 
