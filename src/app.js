@@ -13,6 +13,7 @@ import { wineProductSchema } from './model-wine.js';
 import { spiritsProductSchema } from './model-spirits.js';
 import { champagneProductSchema } from './model-champage.js';
 import jwt from 'jsonwebtoken';
+// import { isLoggedIn } from './login.js';
 import Email from './emails.js';
 import cookieParser from 'cookie-parser'
 // import loginRouter from './user-login.js'
@@ -49,11 +50,10 @@ const spiritsProducts = mongoose.model('spiritsProducts', spiritsProductSchema);
 
 const champagneProduct = mongoose.model('champagneProduct', champagneProductSchema);
 
-
 app.set('view engine', 'ejs');
 app.set('views', './views')
 
-app.use(cookieParser)
+app.use(cookieParser())
 app.use(logger)
 
 app.use('/assets', express.static('public'))
@@ -117,6 +117,9 @@ app.get('/search', (request, response) => {
 // MARK: Drinks data processing stuff
 
 app.get('/beer/:id', (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+
     const slug = request.params.id
 
     const beer = beerdata.products.find(beer => beer.route === slug)
@@ -125,18 +128,20 @@ app.get('/beer/:id', (request, response) => {
         response.render('404', { error: "This beer does not exist" })
     }
     response.render('products-beer', {
+        isLoggedIn: isLoggedIn,
         productTitle: beer.name,
         description: beer.category.description,
         lowproductPrice: beer.price_variation[0].price,
         highproductPrice: beer.price_variation[1].price,
         beer_image: beer.featured_img
+        
     })
 })
 
 
-
-
 app.get('/wine/:id', (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     const slug = request.params.id
     const wine = winedata.products.find(wine => wine.route === slug)
 
@@ -145,6 +150,7 @@ app.get('/wine/:id', (request, response) => {
 
     }
     response.render('products-wine', {
+        isLoggedIn: isLoggedIn,
         productTitle: wine.name,
         description: wine.category.description,
         lowproductPrice: wine.price_variation[0].price,
@@ -153,9 +159,9 @@ app.get('/wine/:id', (request, response) => {
 })
 
 
-
-
 app.get('/spirits/:id', (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     const slug = request.params.id
 
     const spirits = spiritsdata.products.find(spirits => spirits.route === slug)
@@ -164,6 +170,7 @@ app.get('/spirits/:id', (request, response) => {
         response.render('404', { error: "These spirits do not exist" })
     }
     response.render('products-spirits', {
+        isLoggedIn: isLoggedIn,
         productTitle: spirits.name,
         description: spirits.category.description,
         lowproductPrice: spirits.price_variation.price,
@@ -171,9 +178,9 @@ app.get('/spirits/:id', (request, response) => {
     })
 })
 
-
-
 app.get('/champagne/:id', (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     const slug = request.params.id
 
     const champagne = champagnedata.products.find(champagne => champagne.route === slug)
@@ -182,14 +189,13 @@ app.get('/champagne/:id', (request, response) => {
         response.render('404', { error: "This champagne does not exist" })
     }
     response.render('products-champagne', {
+        isLoggedIn: isLoggedIn,
         productTitle: champagne.name,
         description: champagne.category.description,
         lowproductPrice: champagne.price_variation.price,
         champagne_image: champagne.featured_img
     })
 })
-
-
 
 
 // MARK: - Authentication
@@ -221,6 +227,7 @@ app.post('/create-account', async (request, response) => {
 })
 
 app.post('/login', async (request, response) => {
+
     const { email_address, password } = request.body
 
     const user = await User.findOne({ email_address })
@@ -248,24 +255,29 @@ app.post('/login', async (request, response) => {
         .status(200)
     response.cookie('token', token, {
         httpOnly: true,
-        maxAge: 24 * 60 * 30,
+        maxAge: 24 * 60 * 30 * 1000,
     })
         .redirect('/')
 })
 
 
 app.get('/logout', async (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
 
     response
         .clearCookie('token')
-        .redirect('/')
-
-
+        .render('homepage', {
+            isLoggedIn: isLoggedIn,
+        })
 })
+
 
 // MARK: - drink stuff
 
 app.post('/drinks/new', async (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     try {
         console.log(request.body);
 
@@ -276,7 +288,10 @@ app.post('/drinks/new', async (request, response) => {
         })
         await drink.save()
 
-        response.render('drinks/drinker')
+        response.render('drinks/drinker', {
+            isLoggedIn: isLoggedIn,
+
+        })
     } catch (error) {
         console.error(error)
         response.send('Error: The drink could not be created. Maybe it wasnt creative enough')
@@ -284,10 +299,13 @@ app.post('/drinks/new', async (request, response) => {
 })
 
 app.get('/drinks/all-drinks', async (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     const drinks = await Drinks.find({}).exec()
 
 
     response.render('drinks/all-drinks', {
+        isLoggedIn: isLoggedIn,
         drinks: drinks,
 
     })
@@ -296,6 +314,8 @@ app.get('/drinks/all-drinks', async (request, response) => {
 })
 
 app.get('/drinks/edit-drinks/:slug', async (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     const slug = request.params.slug
 
 
@@ -304,7 +324,10 @@ app.get('/drinks/edit-drinks/:slug', async (request, response) => {
         const drinks = await Drinks.findOne({ slug: slug }).exec()
         if (!drinks) throw new Error('Drink not found')
 
-        response.render('drinks/edit-drinks', { drinks: drinks })
+        response.render('drinks/edit-drinks', {
+            isLoggedIn: isLoggedIn,
+            drinks: drinks
+        })
     }
     catch (error) {
         console.error(error)
@@ -331,10 +354,14 @@ app.post('/drinks/:slug', async (request, response) => {
     }
 })
 app.get('/drinks/:slug/delete', async (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     try {
         await Drinks.findOneAndDelete({ slug: request.params.slug })
 
         response.redirect('/drinks/all-drinks')
+
+        
     } catch (error) {
         console.error(error)
         response.send('Error: No drink was deleted.')
@@ -344,66 +371,122 @@ app.get('/drinks/:slug/delete', async (request, response) => {
 
 // MARK: Page Rendering
 app.get('/create-account', (request, response) => {
-    response.render('login/create-account')
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('login/create-account', {
+        isLoggedIn: isLoggedIn,
+    })
 })
-app.get('/test', (request, response) => {
-    response.render('test')
-})
+
 
 // app.get('/edit-account', (request, response) => {
 //     response.render('login/edit-account')
 // })
 
 app.get('/beer', (request, response) => {
-
-    response.render('beer', { beers: beerdata.products })
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('beer', {
+        isLoggedIn: isLoggedIn,
+        beers: beerdata.products
+    })
 })
 
 app.get('/login', (request, response) => {
-    response.render('login/login')
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('login/login', {
+        isLoggedIn: isLoggedIn,
+
+    })
 })
 
 app.get('/drinks/new', (request, response) => {
-    response.render('drinks/drinker')
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('drinks/drinker', {
+        isLoggedIn: isLoggedIn,
+    })
 })
 
 
 app.get('/champagne', (request, response) => {
-    response.render('champagne', { champagnes: champagnedata.products })
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('champagne', {
+        isLoggedIn: isLoggedIn,
+        champagnes: champagnedata.products
+    })
 })
+
 
 
 app.get('/', (request, response) => {
-    const token = request.cookies;
 
+    const token = request.cookies.token;
+    console.log(token);
+
+    const isLoggedIn = !!token;
+    console.log(isLoggedIn);
 
     response.render('homepage', {
-        isLoggedIn: token,
+        isLoggedIn: isLoggedIn,
     });
-});
-
+})
 app.get('/products-wine', (request, response) => {
-    response.render('products-wine')
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('products-wine', {
+        isLoggedIn: isLoggedIn,
+
+    })
 })
 
 app.get('/products-beer', (request, response) => {
-    response.render('products-beer')
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('products-beer', {
+        isLoggedIn: isLoggedIn,
+
+    })
 })
 
 app.get('/community', (request, response) => {
-    response.render('community')
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+
+    response.render('community', {
+        isLoggedIn: isLoggedIn,
+
+    })
 })
 app.get('/wine', (request, response) => {
-    response.render('wine', { wines: winedata.products })
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+
+    response.render('wine', {
+        isLoggedIn: isLoggedIn,
+        wines: winedata.products
+    });
 })
 app.get('/spirits', (request, response) => {
-    response.render('spirits', { spiritss: spiritsdata.products })
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+    response.render('spirits', {
+        isLoggedIn: isLoggedIn,
+        spiritss: spiritsdata.products
+    })
 })
 
-
 app.all('*', (req, res) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
+
     if (req.accepts('html')) {
-        res.render('404', { error: 'This page does not exist' })
+        res.render('404', {
+            isLoggedIn: isLoggedIn,
+            error: 'This page does not exist'
+        })
     }
     else if (req.accepts('json')) {
         res.status(404).json({ error: "404 Not Found" });

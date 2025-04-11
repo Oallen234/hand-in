@@ -74,6 +74,7 @@ padding-top: 20px;}
 }
 .product-grid {
   display: grid;
+  position: center;
   gap: 20px;
   padding: 1rem;
   padding-left: 0;
@@ -187,6 +188,7 @@ padding-top: 20px;}
 @media screen and (min-width: 82rem) {
   .product-grid {
     grid-template-columns: repeat(4, 1fr);
+    position: center;
   }
 }
 
