@@ -20,8 +20,9 @@
 
         <li>
             <form action="/search" method="GET">
-                <input class="search-bar" type="text" name="search" id="search" />
-                <button> ! </button>
+                <input class="search-bar" type="text" name="search" id="search" placeholder="search"/>
+                <button><i class="fa fa-search"></i>
+                   </i>
             </form>
         </li>
         <li>
@@ -30,26 +31,24 @@
 
 
         <li class="dropdown">
-        <% if(isLoggedIn){ %>
-            <a href="javascript:void(0)" id="sgaccount" class="dropbtn">Sign Out</a>
-            <div class="dropdown-content">
-                <a href="/logout">Logout</a>
-            </div>
-          <% } else{ %>  
-            <a href="javascript:void(0)" id="sgaccount" class="dropbtn">Sign In</a>
-            <div class="dropdown-content">
-                <a href="/login">Login</a>
-                <a href="/create-account">Register</a>
-            </div>
-         <% } %>
-        
+            <% if(isLoggedIn){ %>
+                <a href="javascript:void(0)" id="sgaccount" class="dropbtn">Sign Out</a>
+                <div class="dropdown-content">
+                    <a href="/logout">Logout</a>
+                </div>
+                <% } else{ %>
+                    <a href="javascript:void(0)" id="sgaccount" class="dropbtn">Sign In</a>
+                    <div class="dropdown-content">
+                        <a href="/login">Login</a>
+                        <a href="/create-account">Register</a>
+                    </div>
+                    <% } %>
 
-            
-           
+
+
+
         </li>
 
     </ul>
 
 </nav>
-
-

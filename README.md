@@ -12,7 +12,13 @@ To run the project:
 
 
 ## Technologies used
-Web application framework- Express 
+Frontend- HTML5, CSS3, JS
+Backend- Node.js, Express
+Database- MongoDB
+Deployment- Render.com
+
+Other- npm
+
 
 
 ## Pages (10 pages)
@@ -38,6 +44,9 @@ The following features are currently under development:
 - Filter functionality
 - Allowing the user to edit and delete their account
 - The carousel on homepage that can scroll would like it to be clickable and have products in it.
+
+# Not functioning
+- Ability to add products to basket or anything in that direction
 
 
 

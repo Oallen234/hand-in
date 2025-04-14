@@ -50,6 +50,7 @@ const spiritsProducts = mongoose.model('spiritsProducts', spiritsProductSchema);
 
 const champagneProduct = mongoose.model('champagneProduct', champagneProductSchema);
 
+
 app.set('view engine', 'ejs');
 app.set('views', './views')
 
@@ -131,7 +132,7 @@ app.get('/beer/:id', (request, response) => {
     if (beer === undefined) {
         response.render('404', { error: "This beer does not exist" })
     }
-    response.render('products-beer', {
+    return response.render('products-beer', {
         isLoggedIn: isLoggedIn,
         productTitle: beer.name,
         description: beer.category.description,
@@ -150,7 +151,7 @@ app.get('/wine/:id', (request, response) => {
     const wine = winedata.products.find(wine => wine.route === slug)
 
     if (wine === undefined) {
-        response.render('404', { error: "This wine does not exist" })
+        return response.render('404', { error: "This wine does not exist" })
 
     }
     response.render('products-wine', {
@@ -171,7 +172,7 @@ app.get('/spirits/:id', (request, response) => {
     const spirits = spiritsdata.products.find(spirits => spirits.route === slug)
 
     if (spirits === undefined) {
-        response.render('404', { error: "These spirits do not exist" })
+        return response.render('404', { error: "These spirits do not exist" })
     }
     response.render('products-spirits', {
         isLoggedIn: isLoggedIn,
@@ -190,7 +191,7 @@ app.get('/champagne/:id', (request, response) => {
     const champagne = champagnedata.products.find(champagne => champagne.route === slug)
 
     if (champagne === undefined) {
-        response.render('404', { error: "This champagne does not exist" })
+        return response.render('404', { error: "This champagne does not exist" })
     }
     response.render('products-champagne', {
         isLoggedIn: isLoggedIn,
@@ -483,7 +484,7 @@ app.get('/spirits', (request, response) => {
 })
 
 app.all('*', (req, res) => {
-    const token = request.cookies.token;
+    const token = req.cookies.token;
     const isLoggedIn = !!token;
 
     if (req.accepts('html')) {
