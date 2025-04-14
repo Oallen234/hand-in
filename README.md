@@ -1,34 +1,43 @@
-Hand-in 1 (by Feb 25, 16:59): Hand-in your project as git repository, including a README.md file. The repository should contain at least 3 HTML pages which are linked to each other. They must be styled using a variety of CSS rules (without framework). All pages should be responsive, using media queries and at least 2 breakpoints.
-
-
-📝 Hand-in 2/4 (Backend & Routing) by Mar 11, 16:59!: Hand-in your project containing a web backend with at least 3 different routes. At least one route should be dynamic, allowing users to access many different pages with different URLs handled by a single route function in the backend.
-
 This project is a website for Royal Spirit, a company specializing in alcoholic beverages. The purpose of this project is to showcase the company's products, provide information about events, and engage with the community.
 
-Current
-6 pages
-Homepage
+
+## Run project
+To run the project:
+- on local server 'npm run dev'
+- on deployed render.com site click 'Manuel Deploy'  
+
+## Database
+-Connected to Atlas DB 
+-Database contains information for products on each product page, Email's from the email list and User information
+
+
+## Technologies used
+Web application framework- Express 
+
+
+## Pages (10 pages)
+Homepage  
 4 product pages
-1 community page that intends to display events and social media content
+Community page that intends to display events and social media content
+Sign up and Login pages
+Make a drink, edit the drink and display the drinks pages
 
 
-rn you can only access my dynamic routes using http://localhost:3000/use idk if you can open that but yeah.
-These pages are use, ful, les and ed ejs (files)
+
 ## styles
 Substyles css refers to specific code related to the product pages.
 Navvy refers to css specific for the navigation bar.
 
-I have also created some templates for the navigation and waiting list.
+Templates are used to display the navigation bar, the filter, the bottom display section, the header information and waiting list.
 
 
 ## Work in Progress
 
 The following features are currently under development:
-- Waiting list functionality
 - Search bar functionality
-Tho both of these are forms that handle user data.
-
-I am working on a carousel which sort of works but still need to make the items clickable
+- Filter functionality
+- Allowing the user to edit and delete their account
+- The carousel on homepage that can scroll would like it to be clickable and have products in it.
 
 
 

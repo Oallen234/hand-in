@@ -63,6 +63,8 @@ const PORT = 3000
 
 
 app.post('/contact', async (request, response) => {
+    const token = request.cookies.token;
+    const isLoggedIn = !!token;
     try {
         console.log('Contact form submission: ', request.body);
 
@@ -74,7 +76,9 @@ app.post('/contact', async (request, response) => {
 
         const savedEmail = await newEmailSubmission.save();
 
-        response.status(200).render('homepage');
+        response.status(200).render('homepage', {
+            isLoggedIn: isLoggedIn,
+        });
 
     }
     catch (error) {
@@ -134,7 +138,7 @@ app.get('/beer/:id', (request, response) => {
         lowproductPrice: beer.price_variation[0].price,
         highproductPrice: beer.price_variation[1].price,
         beer_image: beer.featured_img
-        
+
     })
 })
 
@@ -361,7 +365,7 @@ app.get('/drinks/:slug/delete', async (request, response) => {
 
         response.redirect('/drinks/all-drinks')
 
-        
+
     } catch (error) {
         console.error(error)
         response.send('Error: No drink was deleted.')

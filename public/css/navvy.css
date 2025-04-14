@@ -136,7 +136,7 @@ li.dropdown {
 
 @media screen and (min-width: 40rem) {}
 
-@media screen and (min-width: 82rem) {
+@media screen and (min-width: 110rem) {
     .bws {
         flex-direction: row;
         display: flex;
@@ -149,4 +149,5 @@ li.dropdown {
     .navigation-button-side {
         display: none;
     }
+    
 }
