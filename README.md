@@ -5,11 +5,16 @@ This project is a website for Royal Spirit, a company specializing in alcoholic 
 
 ## Run project
 To run the project:
-- open git hub with link 'https://github.com/Oallen234/hand-in.git'
--
+- clone git repository using this in your terminal 'git clone https://github.com/Oallen234/hand-in.git'
+- Set up MongoDB
+- Create an .env file and put this in your gitignore
+- Open terminal on the root
+- Run 'npm install' to install dependencies
+- use 'npm start' to start the server
+
 Or
+
 - on use render.com domain 'https://dashing-ghost.onrender.com/'
--  
 
 ## Database
 -Connected to Atlas DB 

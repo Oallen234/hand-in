@@ -18,7 +18,6 @@ import { User } from './user.js';
 import { request } from 'node:http';
 
 const app = express()
-process.env.DATEBASE_PASSWORD
 const DB_URI = process.env.DB_URI
 mongoose.connect(DB_URI)
 
