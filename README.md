@@ -1,3 +1,5 @@
+# Royal Spirit
+
 This project is a website for Royal Spirit, a company specializing in alcoholic beverages. The purpose of this project is to showcase the company's products, provide information about events, and engage with the community.
 
 
@@ -17,7 +19,7 @@ Backend- Node.js, Express
 Database- MongoDB
 Deployment- Render.com
 
-Other- npm
+Tools- npm
 
 
 
@@ -37,17 +39,15 @@ Navvy refers to css specific for the navigation bar.
 Templates are used to display the navigation bar, the filter, the bottom display section, the header information and waiting list.
 
 
-## Work in Progress
 
-The following features are currently under development:
+### In Development
 - Search bar functionality
 - Filter functionality
-- Allowing the user to edit and delete their account
-- The carousel on homepage that can scroll would like it to be clickable and have products in it.
+- User account management (edit/delete)
+- Interactive product carousel on homepage
 
-# Not functioning
-- Ability to add products to basket or anything in that direction
-
+### Planned Features
+- Shopping basket functionality
 
 
 

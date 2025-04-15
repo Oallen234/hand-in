@@ -6,15 +6,18 @@
     <%- include('../includes/navvster') %>
 
       <main style="min-height: 80vh">
-        <h2 class="position-title-black">Create a new drink</h2>
 
         <form class="form-for-drink" action="/drinks/new" method="POST">
+          <h2 class="position-title-black">Create a new drink</h2>
+
           <input type="text" name="name" placeholder="name" required /><br />
           <input type="text" name="slug" placeholder="slug" required /><br />
           <input type="number" name="priceInCents" placeholder="price in cents" required min="0" step="1" /><br />
           <button class="button-make">Save</button>
+
         </form>
         <a href="/drinks/all-drinks"> <button class="button-make">lets see</button> </a>
+
       </main>
 
       <%- include('../includes/waiting-list.ejs') %>

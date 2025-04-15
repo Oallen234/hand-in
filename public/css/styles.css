@@ -201,8 +201,18 @@ article {
 
 .form-for-drink {
   text-align: center;
+  padding: 250px;
+  size-adjust: 300%;
+ 
 }
 
+.form-for-user {
+  text-align: center;
+  padding: 250px;
+  size-adjust: 300%;
+  box-sizing: 300%;
+ 
+}
 .product-name {
   margin-top: 5px;
   text-align: center;
