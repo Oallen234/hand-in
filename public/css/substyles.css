@@ -50,7 +50,7 @@
 
 
 .drink-head {
-  padding-left: 2cm;
+  padding-left: 100px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 300%;
   color: rgb(255, 255, 255);
@@ -63,7 +63,7 @@
 
 
 .drink-text {
-  padding: 10px 2cm;
+  padding: 10px;
 }
 
 .layout {

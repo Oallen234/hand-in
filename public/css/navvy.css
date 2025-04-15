@@ -95,7 +95,7 @@ li.dropdown {
 }
 
 .search-bar {
-    width: 5cm;
+    width: 200px;
     font-size: larger;
     text-align: center;
 }
@@ -114,8 +114,8 @@ li.dropdown {
     border-color: #f0f0f0;
     border: 2px solid #f0f0f0;
     background-color: #121e23;
-    height: 1.4cm;
-    width: 2.9cm;
+    height: 50px;
+    width: 150px;
     transition: color 0.3s ease;
     background-color: 0.3s ease;
     cursor: pointer;
@@ -149,5 +149,5 @@ li.dropdown {
     .navigation-button-side {
         display: none;
     }
-    
+
 }
