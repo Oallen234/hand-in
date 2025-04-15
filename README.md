@@ -5,8 +5,11 @@ This project is a website for Royal Spirit, a company specializing in alcoholic 
 
 ## Run project
 To run the project:
-- on local server 'npm run dev'
-- on deployed render.com site click 'Manuel Deploy'  
+- open git hub with link 'https://github.com/Oallen234/hand-in.git'
+-
+Or
+- on use render.com domain 'https://dashing-ghost.onrender.com/'
+-  
 
 ## Database
 -Connected to Atlas DB 

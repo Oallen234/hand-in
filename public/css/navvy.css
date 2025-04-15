@@ -37,7 +37,7 @@ h1 {
 li a,
 .dropbtn {
     display: inline-block;
-    color:#121e23 ;
+    color: #121e23;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -45,7 +45,7 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-    background-color:#121e23;
+    background-color: #121e23;
 }
 
 
@@ -95,7 +95,7 @@ li.dropdown {
 }
 
 .search-bar {
-    width: 200px;
+    width: 150px;
     font-size: larger;
     text-align: center;
 }
@@ -115,7 +115,7 @@ li.dropdown {
     border: 2px solid #f0f0f0;
     background-color: #121e23;
     height: 50px;
-    width: 150px;
+    width: 100px;
     transition: color 0.3s ease;
     background-color: 0.3s ease;
     cursor: pointer;
@@ -136,7 +136,7 @@ li.dropdown {
 
 @media screen and (min-width: 40rem) {}
 
-@media screen and (min-width: 110rem) {
+@media screen and (min-width: 100rem) {
     .bws {
         flex-direction: row;
         display: flex;
