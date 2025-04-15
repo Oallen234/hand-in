@@ -30,6 +30,8 @@ Community page that intends to display events and social media content
 Sign up and Login pages
 Make a drink, edit the drink and display the drinks pages
 
+# View CRUM functionality
+To view the drink making pages, first register and then login. The link to make a drink will be found on the homepage in the footer. 
 
 
 ## styles

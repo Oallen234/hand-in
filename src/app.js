@@ -1,7 +1,6 @@
 import express, { response } from 'express'
 import 'dotenv/config'
 import { logger } from './middlewares/logger.js'
-import fs from 'node:fs'
 import beerdata from '../jasonnn/beer.json' with { type: "json" };
 import winedata from '../jasonnn/wine.json' with { type: "json" }
 import champagnedata from '../jasonnn/champagne.json' with { type: "json" }
@@ -13,26 +12,15 @@ import { wineProductSchema } from './model-wine.js';
 import { spiritsProductSchema } from './model-spirits.js';
 import { champagneProductSchema } from './model-champage.js';
 import jwt from 'jsonwebtoken';
-// import { isLoggedIn } from './login.js';
 import Email from './emails.js';
 import cookieParser from 'cookie-parser'
-// import loginRouter from './user-login.js'
 import { User } from './user.js';
-// import beerProducts from './model-beer.js';
-// import champagneProduct from './model-champage.js';
-// import wineProduct from './model-wine.js';
-// import spiritsProducts from './model-spirits.js';
-
-// import ProductSchema from './model.js';
 import { request } from 'node:http';
-// import { UserSchema } from './user-login.js';
 
 const app = express()
 process.env.DATEBASE_PASSWORD
 const DB_URI = process.env.DB_URI
 mongoose.connect(DB_URI)
-
-// const Product = mongoose.model('Product', ProductSchema);
 
 const drinksSchema = new mongoose.Schema({
     slug: { type: String, unique: true, required: true },
@@ -99,34 +87,13 @@ app.get('/search', (request, response) => {
     response.send(`you have searched ${userSearch}`)
 })
 
-// MARK: SEEDING
-
-// app.get("/seeding", async (request, response) => {
-//     for (const spirits of spiritsdata.products) {
-//         const product = new spiritsProducts({
-//             name: spirits.name,
-//             featured_img: spirits.featured_img,
-//             route: spirits.route,
-//             price_variation: spirits.price_variation,
-//             category: spirits.category,
-//             sub_category: spirits.sub_category,
-//             brands: spirits.brands,
-
-//         })
-
-//         await product.save()
-//     }
-//     response.send("lmao")
-// })
 
 // MARK: Drinks data processing stuff
 
 app.get('/beer/:id', (request, response) => {
     const token = request.cookies.token;
     const isLoggedIn = !!token;
-
     const slug = request.params.id
-
     const beer = beerdata.products.find(beer => beer.route === slug)
 
     if (beer === undefined) {
@@ -149,7 +116,6 @@ app.get('/wine/:id', (request, response) => {
     const isLoggedIn = !!token;
     const slug = request.params.id
     const wine = winedata.products.find(wine => wine.route === slug)
-
     if (wine === undefined) {
         return response.render('404', { error: "This wine does not exist" })
 
@@ -168,7 +134,6 @@ app.get('/spirits/:id', (request, response) => {
     const token = request.cookies.token;
     const isLoggedIn = !!token;
     const slug = request.params.id
-
     const spirits = spiritsdata.products.find(spirits => spirits.route === slug)
 
     if (spirits === undefined) {
@@ -187,7 +152,6 @@ app.get('/champagne/:id', (request, response) => {
     const token = request.cookies.token;
     const isLoggedIn = !!token;
     const slug = request.params.id
-
     const champagne = champagnedata.products.find(champagne => champagne.route === slug)
 
     if (champagne === undefined) {
@@ -202,27 +166,20 @@ app.get('/champagne/:id', (request, response) => {
     })
 })
 
-
 // MARK: - Authentication
 
 app.post('/create-account', async (request, response) => {
     try {
-
-
         const { email_address, name, age, password } = request.body
-
         const saltRounds = 10
         const passwordHash = await bcrypt.hash(password, saltRounds)
-
         const user = new User({
             email_address,
             name,
             age,
             passwordHash,
         })
-
         const savedUser = await user.save()
-
         response.status(201).redirect("/login")
     }
     catch (error) {
@@ -232,9 +189,7 @@ app.post('/create-account', async (request, response) => {
 })
 
 app.post('/login', async (request, response) => {
-
     const { email_address, password } = request.body
-
     const user = await User.findOne({ email_address })
     const passwordCorrect = user === null
         ? false
@@ -242,20 +197,15 @@ app.post('/login', async (request, response) => {
 
     if (!(user && passwordCorrect)) {
         return response.status(401).json({
-            error: 'invalid username or password',
-
-        }, response.redirect('/login')
-        )
+            error: 'invalid username or password'
+        },
+            response.redirect('/login'))
     }
-
     const userForToken = {
         email_address: user.email_address,
         id: user._id,
     }
-
     const token = jwt.sign(userForToken, process.env.SECRET)
-
-
     response
         .status(200)
     response.cookie('token', token, {
@@ -264,7 +214,6 @@ app.post('/login', async (request, response) => {
     })
         .redirect('/')
 })
-
 
 app.get('/logout', async (request, response) => {
     const token = request.cookies.token;
@@ -276,8 +225,6 @@ app.get('/logout', async (request, response) => {
             isLoggedIn: isLoggedIn,
         })
 })
-
-
 // MARK: - drink stuff
 
 app.post('/drinks/new', async (request, response) => {
@@ -314,8 +261,6 @@ app.get('/drinks/all-drinks', async (request, response) => {
         drinks: drinks,
 
     })
-
-
 })
 
 app.get('/drinks/edit-drinks/:slug', async (request, response) => {
@@ -373,7 +318,6 @@ app.get('/drinks/:slug/delete', async (request, response) => {
     }
 })
 
-
 // MARK: Page Rendering
 app.get('/create-account', (request, response) => {
     const token = request.cookies.token;
@@ -383,10 +327,6 @@ app.get('/create-account', (request, response) => {
     })
 })
 
-
-// app.get('/edit-account', (request, response) => {
-//     response.render('login/edit-account')
-// })
 
 app.get('/beer', (request, response) => {
     const token = request.cookies.token;
@@ -414,7 +354,6 @@ app.get('/drinks/new', (request, response) => {
     })
 })
 
-
 app.get('/champagne', (request, response) => {
     const token = request.cookies.token;
     const isLoggedIn = !!token;
@@ -423,8 +362,6 @@ app.get('/champagne', (request, response) => {
         champagnes: champagnedata.products
     })
 })
-
-
 
 app.get('/', (request, response) => {
 
@@ -499,11 +436,6 @@ app.all('*', (req, res) => {
         res.status(404).type('txt').send("404 Not Found");
     }
 })
-
-
-
-
-
 
 app.listen(PORT, () => {
     console.log(`👋 Started server on port ${PORT}`)
